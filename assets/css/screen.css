@@ -1,12 +1,12 @@
+@charset "IBM437";
 /* ==========================================================================
    Table of Contents
    ========================================================================== */
-
 /*
 
     0.  Normalize
     1.  Icons
-    2.  General
+    2.  General 
     3.  Utilities
     4.  General
     5.  Single Post
@@ -18,1128 +18,1426 @@
     11. Media Queries (Mobile)
 
  */
-
 /* ==========================================================================
    0. Normalize.css v2.1.3 | MIT License | git.io/normalize | (minified)
    ========================================================================== */
-
+/* line 30, ../scss/screen.scss */
 article, aside, details,
 figcaption, figure,
 footer, header, hgroup,
 main, nav, section,
-summary { display: block; }
-audio, canvas, video { display: inline-block; }
-audio:not([controls]) { display: none; height: 0; }
-[hidden], template { display: none; }
+summary {
+  display: block;
+}
+
+/* line 31, ../scss/screen.scss */
+audio, canvas, video {
+  display: inline-block;
+}
+
+/* line 32, ../scss/screen.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/* line 33, ../scss/screen.scss */
+[hidden], template {
+  display: none;
+}
+
+/* line 34, ../scss/screen.scss */
 html {
-   font-family: sans-serif;
-   -ms-text-size-adjust: 100%;
-   -webkit-text-size-adjust: 100%;
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
-body { margin: 0; }
-a { background: transparent; }
-a:focus { outline: thin dotted; }
-a:active, a:hover { outline: 0; }
-h1 { font-size: 2em; margin: 0.67em 0; }
-abbr[title] { border-bottom: 1px dotted; }
-b, strong { font-weight: bold; }
-dfn { font-style: italic; }
+
+/* line 39, ../scss/screen.scss */
+body {
+  margin: 0;
+}
+
+/* line 40, ../scss/screen.scss */
+a {
+  background: transparent;
+}
+
+/* line 41, ../scss/screen.scss */
+a:focus {
+  outline: thin dotted;
+}
+
+/* line 42, ../scss/screen.scss */
+a:active, a:hover {
+  outline: 0;
+}
+
+/* line 43, ../scss/screen.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* line 44, ../scss/screen.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/* line 45, ../scss/screen.scss */
+b, strong {
+  font-weight: bold;
+}
+
+/* line 46, ../scss/screen.scss */
+dfn {
+  font-style: italic;
+}
+
+/* line 47, ../scss/screen.scss */
 hr {
-   -moz-box-sizing: content-box;
-   box-sizing: content-box;
-   height: 0;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
 }
-mark { background: #ff0; color: #000; }
+
+/* line 52, ../scss/screen.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/* line 54, ../scss/screen.scss */
 code, kbd, pre,
-samp { font-family: monospace, serif; font-size: 1em; }
-pre { white-space: pre-wrap; }
-q { quotes: "\201C" "\201D" "\2018" "\2019"; }
-small { font-size: 80%; }
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+/* line 55, ../scss/screen.scss */
+pre {
+  white-space: pre-wrap;
+}
+
+/* line 56, ../scss/screen.scss */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/* line 57, ../scss/screen.scss */
+small {
+  font-size: 80%;
+}
+
+/* line 58, ../scss/screen.scss */
 sub, sup {
-   font-size: 75%;
-   line-height: 0;
-   position: relative;
-   vertical-align: baseline;
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
 }
-sup { top: -0.5em; }
-sub { bottom: -0.25em; }
-img { border: 0; }
-svg:not(:root) { overflow: hidden; }
-figure { margin: 0; }
+
+/* line 64, ../scss/screen.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 65, ../scss/screen.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 66, ../scss/screen.scss */
+img {
+  border: 0;
+}
+
+/* line 67, ../scss/screen.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* line 68, ../scss/screen.scss */
+figure {
+  margin: 0;
+}
+
+/* line 69, ../scss/screen.scss */
 fieldset {
-   border: 1px solid #c0c0c0;
-   margin: 0 2px;
-   padding: 0.35em 0.625em 0.75em;
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
 }
-legend { border: 0; padding: 0; }
+
+/* line 74, ../scss/screen.scss */
+legend {
+  border: 0;
+  padding: 0;
+}
+
+/* line 76, ../scss/screen.scss */
 button, input, select,
-textarea { font-family: inherit; font-size: 100%; margin: 0; }
-button, input { line-height: normal; }
-button, select { text-transform: none; }
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+
+/* line 77, ../scss/screen.scss */
+button, input {
+  line-height: normal;
+}
+
+/* line 78, ../scss/screen.scss */
+button, select {
+  text-transform: none;
+}
+
+/* line 80, ../scss/screen.scss */
 button, html input[type="button"],
 input[type="reset"], input[type="submit"] {
-   -webkit-appearance: button;
-   cursor: pointer;
+  -webkit-appearance: button;
+  cursor: pointer;
 }
-button[disabled], html input[disabled] { cursor: default; }
-input[type="checkbox"],
-input[type="radio"] { box-sizing: border-box; padding: 0; }
-input[type="search"] {
-   -webkit-appearance: textfield;
-   -moz-box-sizing: content-box;
-   -webkit-box-sizing: content-box;
-   box-sizing: content-box;
-}
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
-button::-moz-focus-inner,
-input::-moz-focus-inner { border: 0; padding: 0; }
-textarea { overflow: auto; vertical-align: top; }
-table { border-collapse: collapse; border-spacing: 0; }
 
+/* line 84, ../scss/screen.scss */
+button[disabled], html input[disabled] {
+  cursor: default;
+}
+
+/* line 86, ../scss/screen.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* line 87, ../scss/screen.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/* line 94, ../scss/screen.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* line 96, ../scss/screen.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 97, ../scss/screen.scss */
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+/* line 98, ../scss/screen.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
 
 /* ==========================================================================
    1. Icons - Sets up the icon font and respective classes
    ========================================================================== */
-
 /* Import the font file with the icons in it */
 @font-face {
-    font-family: 'icons';
-    src:url('../fonts/icons.eot');
-    src:url('../fonts/icons.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/icons.woff') format('woff'),
-        url('../fonts/icons.ttf') format('truetype'),
-        url('../fonts/icons.svg#icons') format('svg');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'icons';
+  src: url("../fonts/icons.eot");
+  src: url("../fonts/icons.eot?#iefix") format("embedded-opentype"), url("../fonts/icons.woff") format("woff"), url("../fonts/icons.ttf") format("truetype"), url("../fonts/icons.svg#icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 
 /* Apply these base styles to all icons */
+/* line 122, ../scss/screen.scss */
 .icon-ghost:before,
 .icon-feed:before,
 .icon-twitter:before,
 .icon-google-plus:before,
 .icon-facebook:before {
-    font-family: 'icons';
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    text-decoration: none;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  font-family: 'icons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Each icon is created by inserting the corret character into the
    content of the :before pseudo element. Like a boss. */
+/* line 137, ../scss/screen.scss */
 .icon-ghost:before {
-    content: "\e000";
-}
-.icon-feed:before {
-    content: "\e001";
-}
-.icon-twitter:before {
-    content: "\e002";
-    font-size: 1.1em;
-}
-.icon-google-plus:before {
-    content: "\e003";
-}
-.icon-facebook:before {
-    content: "\e004";
+  content: "\e000";
 }
 
+/* line 140, ../scss/screen.scss */
+.icon-feed:before {
+  content: "\e001";
+}
+
+/* line 143, ../scss/screen.scss */
+.icon-twitter:before {
+  content: "\e002";
+  font-size: 1.1em;
+}
+
+/* line 147, ../scss/screen.scss */
+.icon-google-plus:before {
+  content: "\e003";
+}
+
+/* line 150, ../scss/screen.scss */
+.icon-facebook:before {
+  content: "\e004";
+}
 
 /* ==========================================================================
    2. General - Setting up some base styles
    ========================================================================== */
-
+/* line 159, ../scss/screen.scss */
 html {
-    height: 100%;
-    max-height: 100%;
-    font-size: 62.5%;
+  height: 100%;
+  max-height: 100%;
+  font-size: 62.5%;
 }
 
+/* line 165, ../scss/screen.scss */
 body {
-    height: 100%;
-    max-height: 100%;
-    font-family: 'Noto Serif', serif;
-    font-size: 2.0rem;
-    line-height: 1.6em;
-    color: #3A4145;
+  height: 100%;
+  max-height: 100%;
+  font-family: 'Noto Serif', serif;
+  font-size: 2.0rem;
+  line-height: 1.6em;
+  color: #3A4145;
 }
 
+/* line 174, ../scss/screen.scss */
 ::-moz-selection {
-    color: #222;
-    background: #D6EDFF;
-    text-shadow: none;
+  color: #222;
+  background: #D6EDFF;
+  text-shadow: none;
 }
 
+/* line 180, ../scss/screen.scss */
 ::selection {
-    color: #222;
-    background: #D6EDFF;
-    text-shadow: none;
+  color: #222;
+  background: #D6EDFF;
+  text-shadow: none;
 }
 
+/* line 187, ../scss/screen.scss */
 h1, h2, h3,
 h4, h5, h6 {
-    text-rendering: optimizeLegibility;
-    line-height: 1;
-    margin-top: 0;
-    font-family: 'Open Sans', sans-serif;
+  text-rendering: optimizeLegibility;
+  line-height: 1;
+  margin-top: 0;
+  font-family: 'Open Sans', sans-serif;
 }
 
+/* line 194, ../scss/screen.scss */
 h1 {
-    font-size: 5rem;
-    line-height: 1.2em;
-    letter-spacing: -2px;
-    text-indent: -3px;
+  font-size: 5rem;
+  line-height: 1.2em;
+  letter-spacing: -2px;
+  text-indent: -3px;
 }
 
+/* line 201, ../scss/screen.scss */
 h2 {
-    font-size: 4rem;
-    line-height: 1.2em;
-    letter-spacing: -1px;
-    text-indent: -2px;
+  font-size: 4rem;
+  line-height: 1.2em;
+  letter-spacing: -1px;
+  text-indent: -2px;
 }
 
+/* line 208, ../scss/screen.scss */
 h3 {
-    font-size: 3.5rem;
+  font-size: 3.5rem;
 }
 
+/* line 212, ../scss/screen.scss */
 h4 {
-    font-size: 3rem;
+  font-size: 3rem;
 }
 
+/* line 216, ../scss/screen.scss */
 h5 {
-    font-size: 2.5rem;
+  font-size: 2.5rem;
 }
 
+/* line 220, ../scss/screen.scss */
 h6 {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
+/* line 224, ../scss/screen.scss */
 a {
-    color: #4a4a4a;
-    transition: color ease 0.3s;
+  color: #4a4a4a;
+  transition: color ease 0.3s;
 }
 
+/* line 229, ../scss/screen.scss */
 a:hover {
-    color: #57A3E8;
+  color: #57A3E8;
 }
 
+/* line 234, ../scss/screen.scss */
 h1 a, h2 a, h3 a,
 h4 a, h5 a, h6 a {
-    color: #50585D;
+  color: #50585D;
 }
 
-
+/* line 239, ../scss/screen.scss */
 p, ul, ol, dl {
-    margin: 1.6em 0;
+  margin: 1.6em 0;
 }
 
+/* line 244, ../scss/screen.scss */
 ol ol, ul ul,
 ul ol, ol ul {
-    margin: 0.4em 0;
+  margin: 0.4em 0;
 }
 
+/* line 248, ../scss/screen.scss */
 dl dt {
-    float: left;
-    width: 180px;
-    overflow: hidden;
-    clear: left;
-    text-align: right;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    font-weight: bold;
-    margin-bottom: 1em
+  float: left;
+  width: 180px;
+  overflow: hidden;
+  clear: left;
+  text-align: right;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: bold;
+  margin-bottom: 1em;
 }
 
+/* line 260, ../scss/screen.scss */
 dl dd {
-    margin-left: 200px;
-    margin-bottom: 1em
+  margin-left: 200px;
+  margin-bottom: 1em;
 }
 
+/* line 265, ../scss/screen.scss */
 hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #efefef;
-    margin: 3.2em 0;
-    padding: 0;
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #efefef;
+  margin: 3.2em 0;
+  padding: 0;
 }
 
+/* line 274, ../scss/screen.scss */
 blockquote {
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    margin: 1.6em 0 1.6em -2.2em;
-    padding: 0 0 0 1.6em;
-    border-left: #4a4a4a 0.4em solid;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 1.6em 0 1.6em -2.2em;
+  padding: 0 0 0 1.6em;
+  border-left: #4a4a4a 0.4em solid;
 }
 
+/* line 282, ../scss/screen.scss */
 blockquote p {
-    margin: 0.8em 0;
-    font-style: italic;
+  margin: 0.8em 0;
+  font-style: italic;
 }
 
+/* line 287, ../scss/screen.scss */
 blockquote small {
-    display: inline-block;
-    margin: 0.8em 0 0.8em 1.5em;
-    font-size:0.9em;
-    color: #ccc;
+  display: inline-block;
+  margin: 0.8em 0 0.8em 1.5em;
+  font-size: 0.9em;
+  color: #ccc;
 }
 
-blockquote small:before { content: '\2014 \00A0'; }
+/* line 294, ../scss/screen.scss */
+blockquote small:before {
+  content: '\2014 \00A0';
+}
 
+/* line 296, ../scss/screen.scss */
 blockquote cite {
-    font-weight:bold;
+  font-weight: bold;
 }
 
-blockquote cite a { font-weight: normal; }
+/* line 300, ../scss/screen.scss */
+blockquote cite a {
+  font-weight: normal;
+}
 
+/* line 302, ../scss/screen.scss */
 mark {
-    background-color: #ffc336;
+  background-color: #ffc336;
 }
 
+/* line 306, ../scss/screen.scss */
 code, tt {
-    padding: 1px 3px;
-    font-family: Inconsolata, monospace, sans-serif;
-    font-size: 0.85em;
-    white-space: pre-wrap;
-    border: 1px solid #E3EDF3;
-    background: #F7FAFB;
-    border-radius: 2px;
+  padding: 1px 3px;
+  font-family: Inconsolata, monospace, sans-serif;
+  font-size: 0.85em;
+  white-space: pre-wrap;
+  border: 1px solid #E3EDF3;
+  background: #F7FAFB;
+  border-radius: 2px;
 }
 
+/* line 316, ../scss/screen.scss */
 pre {
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    margin: 1.6em 0;
-    border: 1px solid #E3EDF3;
-    width: 100%;
-    padding: 10px;
-    font-family: Inconsolata, monospace, sans-serif;
-    font-size: 0.9em;
-    white-space: pre;
-    overflow: auto;
-    background: #F7FAFB;
-    border-radius: 3px;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 1.6em 0;
+  border: 1px solid #E3EDF3;
+  width: 100%;
+  padding: 10px;
+  font-family: Inconsolata, monospace, sans-serif;
+  font-size: 0.9em;
+  white-space: pre;
+  overflow: auto;
+  background: #F7FAFB;
+  border-radius: 3px;
 }
 
+/* line 331, ../scss/screen.scss */
 pre code, tt {
-    font-size: inherit;
-    white-space: -moz-pre-wrap;
-    white-space: pre-wrap;
-    background: transparent;
-    border: none;
-    padding: 0;
+  font-size: inherit;
+  white-space: -moz-pre-wrap;
+  white-space: pre-wrap;
+  background: transparent;
+  border: none;
+  padding: 0;
 }
 
+/* line 340, ../scss/screen.scss */
 kbd {
-    display: inline-block;
-    margin-bottom: 0.4em;
-    padding: 1px 8px;
-    border: #ccc 1px solid;
-    color: #666;
-    text-shadow: #fff 0 1px 0;
-    font-size: 0.9em;
-    font-weight: bold;
-    background: #f4f4f4;
-    border-radius: 4px;
-    box-shadow:
-        0 1px 0 rgba(0, 0, 0, 0.2),
-        0 1px 0 0 #fff inset;
+  display: inline-block;
+  margin-bottom: 0.4em;
+  padding: 1px 8px;
+  border: #ccc 1px solid;
+  color: #666;
+  text-shadow: #fff 0 1px 0;
+  font-size: 0.9em;
+  font-weight: bold;
+  background: #f4f4f4;
+  border-radius: 4px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 0 0 white inset;
 }
 
+/* line 356, ../scss/screen.scss */
 table {
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    margin: 1.6em 0;
-    width:100%;
-    max-width: 100%;
-    background-color: transparent;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 1.6em 0;
+  width: 100%;
+  max-width: 100%;
+  background-color: transparent;
 }
 
+/* line 366, ../scss/screen.scss */
 table th,
 table td {
-    padding: 8px;
-    line-height: 20px;
-    text-align: left;
-    vertical-align: top;
-    border-top: 1px solid #efefef;
+  padding: 8px;
+  line-height: 20px;
+  text-align: left;
+  vertical-align: top;
+  border-top: 1px solid #efefef;
 }
 
-table th { color: #000; }
+/* line 374, ../scss/screen.scss */
+table th {
+  color: #000;
+}
 
+/* line 381, ../scss/screen.scss */
 table caption + thead tr:first-child th,
 table caption + thead tr:first-child td,
 table colgroup + thead tr:first-child th,
 table colgroup + thead tr:first-child td,
 table thead:first-child tr:first-child th,
 table thead:first-child tr:first-child td {
-    border-top: 0;
+  border-top: 0;
 }
 
-table tbody + tbody { border-top: 2px solid #efefef; }
+/* line 385, ../scss/screen.scss */
+table tbody + tbody {
+  border-top: 2px solid #efefef;
+}
 
-table table table { background-color: #fff; }
+/* line 387, ../scss/screen.scss */
+table table table {
+  background-color: #fff;
+}
 
+/* line 390, ../scss/screen.scss */
 table tbody > tr:nth-child(odd) > td,
 table tbody > tr:nth-child(odd) > th {
-    background-color: #f6f6f6;
+  background-color: #f6f6f6;
 }
 
+/* line 395, ../scss/screen.scss */
 table.plain tbody > tr:nth-child(odd) > td,
 table.plain tbody > tr:nth-child(odd) > th {
-   background: transparent;
+  background: transparent;
 }
 
+/* line 399, ../scss/screen.scss */
 iframe, .fluid-width-video-wrapper {
-    display: block;
-    margin: 1.6em 0;
+  display: block;
+  margin: 1.6em 0;
 }
 
 /* When a video is inside the fitvids wrapper, drop the
 margin on the iframe, cause it breaks stuff. */
+/* line 406, ../scss/screen.scss */
 .fluid-width-video-wrapper iframe {
-    margin: 0;
+  margin: 0;
 }
-
 
 /* ==========================================================================
    3. Utilities - These things get used a lot
    ========================================================================== */
-
 /* Clears shit */
+/* line 417, ../scss/screen.scss */
 .clearfix:before,
 .clearfix:after {
-    content: " ";
-    display: table;
+  content: " ";
+  display: table;
 }
-.clearfix:after { clear: both; }
-.clearfix { *zoom: 1; }
+
+/* line 421, ../scss/screen.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 422, ../scss/screen.scss */
+.clearfix {
+  *zoom: 1;
+}
 
 /* Hides shit */
+/* line 425, ../scss/screen.scss */
 .hidden {
-    text-indent: -9999px;
-    visibility: hidden;
-    display: none;
+  text-indent: -9999px;
+  visibility: hidden;
+  display: none;
 }
 
 /* Creates a responsive wrapper that makes our content scale nicely */
+/* line 432, ../scss/screen.scss */
 .inner {
-    position: relative;
-    width: 80%;
-    max-width: 700px;
-    margin: 0 auto;
+  position: relative;
+  width: 80%;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 /* Centres vertically yo. (IE8+) */
+/* line 440, ../scss/screen.scss */
 .vertical {
-    display: table-cell;
-    vertical-align: middle;
+  display: table-cell;
+  vertical-align: middle;
 }
-
 
 /* ==========================================================================
    4. General - The main styles for the the theme
    ========================================================================== */
-
 /* Big cover image on the home page */
+/* line 451, ../scss/screen.scss */
 .site-head {
-    position: relative;
-    display: table;
-    width: 100%;
-    height: 60%;
-    margin-bottom: 5rem;
-    text-align: center;
-    color: #fff;
-    background: #303538 no-repeat center center;
-    background-size: cover;
+  position: relative;
+  display: table;
+  width: 100%;
+  height: 60%;
+  margin-bottom: 5rem;
+  text-align: center;
+  color: #fff;
+  background: #303538 no-repeat center center;
+  background-size: cover;
 }
 
+/* line 463, ../scss/screen.scss */
 .blog-logo {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 /* Yo-logo. Yolo-go. Upload one in ghost/settings/ */
+/* line 468, ../scss/screen.scss */
 .blog-logo img {
-    display: block;
-    max-height: 100px;
-    width: auto;
-    margin: 0 auto;
-    line-height: 0;
+  display: block;
+  max-height: 100px;
+  width: auto;
+  margin: 0 auto;
+  line-height: 0;
 }
 
 /* The details of your blog. Defined in ghost/settings/ */
+/* line 477, ../scss/screen.scss */
 .blog-title {
-    margin: 10px 0 10px 0;
-    font-size: 5rem;
-    letter-spacing: -1px;
-    font-weight: bold;
-    font-family: 'Open Sans', sans-serif;
-    text-shadow: 0 1px 6px rgba(0,0,0,0.1);
+  margin: 10px 0 10px 0;
+  font-size: 5rem;
+  letter-spacing: -1px;
+  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* line 486, ../scss/screen.scss */
 .blog-description {
-    margin: 0;
-    font-size: 1.8rem;
-    line-height: 1.5em;
-    font-weight: 300;
-    font-family: 'Noto Serif', serif;
-    letter-spacing: 0;
-    text-shadow: 0 1px 3px rgba(0,0,0,0.15);
+  margin: 0;
+  font-size: 1.8rem;
+  line-height: 1.5em;
+  font-weight: 300;
+  font-family: 'Noto Serif', serif;
+  letter-spacing: 0;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
 }
 
 /* Every post, on every page, gets this style on its <article> tag */
+/* line 497, ../scss/screen.scss */
 .post {
-    position: relative;
-    width:80%;
-    max-width: 700px;
-    margin: 4rem auto;
-    padding-bottom: 4rem;
-    border-bottom: #EBF2F6 1px solid;
-    word-break: break-word;
-    hyphens: auto;
+  position: relative;
+  width: 80%;
+  max-width: 700px;
+  margin: 4rem auto;
+  padding-bottom: 4rem;
+  border-bottom: #EBF2F6 1px solid;
+  word-break: break-word;
+  hyphens: auto;
 }
 
 /* Add a little circle in the middle of the border-bottom on our .post
    just for the lolz and stylepoints. */
+/* line 510, ../scss/screen.scss */
 .post:after {
-    display: block;
-    content: "";
-    width: 7px;
-    height: 7px;
-    border: #E7EEF2 1px solid;
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    margin-left: -5px;
-    background: #fff;
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
-    border-radius: 100%;
-    box-shadow: #fff 0 0 0 5px;
+  display: block;
+  content: "";
+  width: 7px;
+  height: 7px;
+  border: #E7EEF2 1px solid;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  margin-left: -5px;
+  background: #fff;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  box-shadow: #fff 0 0 0 5px;
 }
 
+/* line 527, ../scss/screen.scss */
 .post-title {
-    margin:0;
+  margin: 0;
 }
 
+/* line 531, ../scss/screen.scss */
 .post-title a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
+/* line 535, ../scss/screen.scss */
 .post-excerpt p {
-    margin: 1.6rem 0 0 0;
-    font-size: 0.9em;
-    line-height: 1.6em;
+  margin: 1.6rem 0 0 0;
+  font-size: 0.9em;
+  line-height: 1.6em;
 }
 
+/* line 541, ../scss/screen.scss */
 .post-meta {
-    display: inline-block;
-    margin: 0 0 5px 0;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.5rem;
-    color: #9EABB3;
+  display: inline-block;
+  margin: 0 0 5px 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.5rem;
+  color: #9EABB3;
 }
 
+/* line 549, ../scss/screen.scss */
 .post-meta a {
-    color: #9EABB3;
-    text-decoration: none;
+  color: #9EABB3;
+  text-decoration: none;
 }
 
+/* line 554, ../scss/screen.scss */
 .post-meta a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
+/* line 558, ../scss/screen.scss */
 .user-meta {
-    position: relative;
-    padding: 0.3rem 40px 0 100px;
-    min-height: 77px;
+  position: relative;
+  padding: 0.3rem 40px 0 100px;
+  min-height: 77px;
 }
 
+/* line 564, ../scss/screen.scss */
 .user-image {
-    position: absolute;
-    top: 0;
-    left: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
+/* line 570, ../scss/screen.scss */
 .user-name {
-    display: block;
-    font-weight: bold;
+  display: block;
+  font-weight: bold;
 }
 
+/* line 575, ../scss/screen.scss */
 .user-bio {
-    display: block;
-    max-width: 440px;
-    font-size: 1.4rem;
-    line-height: 1.5em;
+  display: block;
+  max-width: 440px;
+  font-size: 1.4rem;
+  line-height: 1.5em;
 }
 
+/* line 582, ../scss/screen.scss */
 .publish-meta {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 4.3rem 0 4rem 0;
-    text-align: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 4.3rem 0 4rem 0;
+  text-align: right;
 }
 
+/* line 590, ../scss/screen.scss */
 .publish-heading {
-    display: block;
-    font-weight: bold;
+  display: block;
+  font-weight: bold;
 }
 
+/* line 595, ../scss/screen.scss */
 .publish-date {
-    display: block;
-    font-size: 1.4rem;
-    line-height: 1.5em;
+  display: block;
+  font-size: 1.4rem;
+  line-height: 1.5em;
 }
 
 /* ==========================================================================
    5. Single Post - When you click on an individual post
    ========================================================================== */
-
 /* Stop .full-img from creating horizontal scroll - slight hack due to
    imperfections with browser width % calculations and rounding */
+/* line 607, ../scss/screen.scss */
 .post-template .content {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 /* Tweak the .post wrapper style */
+/* line 612, ../scss/screen.scss */
 .post-template .post {
-    margin-top: 0;
-    border-bottom: none;
-    padding-bottom: 0;
+  margin-top: 0;
+  border-bottom: none;
+  padding-bottom: 0;
 }
 
 /* Kill that stylish little circle that was on the border, too */
+/* line 619, ../scss/screen.scss */
 .post-template .post:after {
-    display: none;
+  display: none;
 }
 
 /* Insert some mad padding up in the header for better spacing */
+/* line 624, ../scss/screen.scss */
 .post-template .post-header {
-    padding: 60px 0;
-    text-align: center;
+  padding: 60px 0;
+  text-align: center;
 }
 
+/* line 629, ../scss/screen.scss */
 .post-template .blog-title {
-    display: inline-block;
-    padding: 2.5rem 0;
+  display: inline-block;
+  padding: 2.5rem 0;
 }
 
 /* Keep images centred and within the bounds of the post-width */
+/* line 635, ../scss/screen.scss */
 .post-content img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto;
-    padding: 0.6em 0;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0.6em 0;
 }
 
 /* Break out larger images to be wider than the main text column
    the class is applied with jQuery */
+/* line 645, ../scss/screen.scss */
 .post-content .full-img {
-    width: 126%;
-    max-width: none;
-    margin: 0 -13%;
+  width: 126%;
+  max-width: none;
+  margin: 0 -13%;
 }
 
 /* The author credit area after the post */
+/* line 652, ../scss/screen.scss */
 .post-footer {
-    position: relative;
-    margin: 4rem 0 0 0;
-    padding: 4rem 0 0 0;
-    border-top: #EBF2F6 1px solid;
+  position: relative;
+  margin: 4rem 0 0 0;
+  padding: 4rem 0 0 0;
+  border-top: #EBF2F6 1px solid;
 }
 
+/* line 659, ../scss/screen.scss */
 .post-footer h4 {
-    font-size: 1.8rem;
-    margin: 0;
+  font-size: 1.8rem;
+  margin: 0;
 }
 
+/* line 664, ../scss/screen.scss */
 .post-footer p {
-    margin: 1rem 0;
-    font-size: 1.4rem;
-    line-height: 1.6em;
+  margin: 1rem 0;
+  font-size: 1.4rem;
+  line-height: 1.6em;
 }
 
 /* list of author links - location / url */
+/* line 671, ../scss/screen.scss */
 .author-meta {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    font-size: 1.4rem;
-    line-height: 1;
-    font-style: italic;
-    color: #9EABB3;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-size: 1.4rem;
+  line-height: 1;
+  font-style: italic;
+  color: #9EABB3;
 }
 
+/* line 681, ../scss/screen.scss */
 .author-meta li {
-    float: left;
-    margin-left: 10px; /* space to the left of the bullet */
+  float: left;
+  margin-left: 10px;
+  /* space to the left of the bullet */
 }
 
 /* bullet divider */
+/* line 687, ../scss/screen.scss */
 .author-meta li:before {
-    content: "•";
-    display: inline-block;
-    margin-right: 10px; /* space to the right of the bullet */
-    color: #BBC7CC;
+  content: "•";
+  display: inline-block;
+  margin-right: 10px;
+  /* space to the right of the bullet */
+  color: #BBC7CC;
 }
 
 /* disable the bullet divider for the first item in the list */
-.author-meta li:first-child { margin-left: 0; }
-.author-meta li:first-child:before { display: none; }
-
-.author-meta a {
-    color: #9EABB3;
+/* line 695, ../scss/screen.scss */
+.author-meta li:first-child {
+  margin-left: 0;
 }
+
+/* line 696, ../scss/screen.scss */
+.author-meta li:first-child:before {
+  display: none;
+}
+
+/* line 698, ../scss/screen.scss */
+.author-meta a {
+  color: #9EABB3;
+}
+
+/* line 701, ../scss/screen.scss */
 .author-meta a:hover {
-    color: #57A3E8;
+  color: #57A3E8;
 }
 
 /* Create some space to the right for the share links */
+/* line 706, ../scss/screen.scss */
 .post-footer .author {
-    margin-right: 180px;
+  margin-right: 180px;
 }
 
 /* Drop the share links in the space to the right.
    Doing it like this means it's easier for the author bio
    to be flexible at smaller screen sizes while the share
    links remain at a fixed width the whole time */
+/* line 714, ../scss/screen.scss */
 .post-footer .share {
-    position: absolute;
-    top: 4rem;
-    right: 0;
-    width: 140px;
+  position: absolute;
+  top: 4rem;
+  right: 0;
+  width: 140px;
 }
 
+/* line 721, ../scss/screen.scss */
 .post-footer .share a {
-    font-size: 1.8rem;
-    display: inline-block;
-    margin: 1rem 1.6rem 1.6rem 0;
-    color: #BBC7CC;
-    text-decoration: none;
+  font-size: 1.8rem;
+  display: inline-block;
+  margin: 1rem 1.6rem 1.6rem 0;
+  color: #BBC7CC;
+  text-decoration: none;
 }
 
+/* line 729, ../scss/screen.scss */
 .post-footer .share a:hover {
-    color: #50585D;
+  color: #50585D;
 }
-
 
 /* ==========================================================================
    6. Tag archive
    ========================================================================== */
-
+/* line 738, ../scss/screen.scss */
 .archive-template .site-head {
-    height: auto;
-    padding-bottom: 5rem;
+  height: auto;
+  padding-bottom: 5rem;
 }
 
+/* line 743, ../scss/screen.scss */
 .archive-template .site-head a {
-    color: #fff;
+  color: #fff;
 }
 
+/* line 747, ../scss/screen.scss */
 .archive-template .blog-logo {
-    display: block;
-    margin-top: 5rem;
+  display: block;
+  margin-top: 5rem;
 }
 
+/* line 752, ../scss/screen.scss */
 .tag-archive-header {
-    padding: 20px 0;
-    text-align: center;
-    max-width: 700px;
-    margin: 4rem auto;
-    border-bottom: 1px solid #EBF2F6;
-    position: relative;
+  padding: 20px 0;
+  text-align: center;
+  max-width: 700px;
+  margin: 4rem auto;
+  border-bottom: 1px solid #EBF2F6;
+  position: relative;
 }
 
+/* line 761, ../scss/screen.scss */
 .tag-archive-header:after {
-    display: block;
-    content: "";
-    width: 7px;
-    height: 7px;
-    border: #E7EEF2 1px solid;
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    margin-left: -5px;
-    background: #fff;
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
-    border-radius: 100%;
-    box-shadow: #fff 0 0 0 5px;
+  display: block;
+  content: "";
+  width: 7px;
+  height: 7px;
+  border: #E7EEF2 1px solid;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  margin-left: -5px;
+  background: #fff;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  box-shadow: #fff 0 0 0 5px;
 }
 
+/* line 778, ../scss/screen.scss */
 .archive-template .blog-title {
-    display: inline-block;
-    padding: 2.5rem 0;
+  display: inline-block;
+  padding: 2.5rem 0;
 }
 
 /* ==========================================================================
    7. Third Party Elements - Embeds from other services
    ========================================================================== */
-
 /* Github */
-
+/* line 789, ../scss/screen.scss */
 .gist table {
-    margin: 0;
-    font-size: 1.4rem;
+  margin: 0;
+  font-size: 1.4rem;
 }
 
+/* line 794, ../scss/screen.scss */
 .gist .line-number {
-    min-width: 25px;
-    font-size: 1.1rem;
+  min-width: 25px;
+  font-size: 1.1rem;
 }
-
 
 /* ==========================================================================
    8. Pagination - Tools to let you flick between pages
    ========================================================================== */
-
 /* The main wrapper for our pagination links */
+/* line 805, ../scss/screen.scss */
 .pagination {
-    position: relative;
-    width: 80%;
-    max-width: 700px;
-    margin: 4rem auto;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.3rem;
-    color: #9EABB3;
-    text-align: center;
+  position: relative;
+  width: 80%;
+  max-width: 700px;
+  margin: 4rem auto;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.3rem;
+  color: #9EABB3;
+  text-align: center;
 }
 
+/* line 816, ../scss/screen.scss */
 .pagination a {
-    color: #9EABB3;
+  color: #9EABB3;
 }
 
 /* Push the previous/next links out to the left/right */
+/* line 822, ../scss/screen.scss */
 .older-posts,
 .newer-posts {
-    position: absolute;
-    display: inline-block;
-    padding: 0 15px;
-    border: #EBF2F6 2px solid;
-    text-decoration: none;
-    border-radius: 30px;
-    transition: border ease 0.3s;
+  position: absolute;
+  display: inline-block;
+  padding: 0 15px;
+  border: #EBF2F6 2px solid;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: border ease 0.3s;
 }
 
+/* line 832, ../scss/screen.scss */
 .older-posts {
-    right: 0;
+  right: 0;
 }
 
+/* line 836, ../scss/screen.scss */
 .page-number {
-    display: inline-block;
-    padding: 2px 0;
+  display: inline-block;
+  padding: 2px 0;
 }
 
+/* line 841, ../scss/screen.scss */
 .newer-posts {
-    left: 0;
+  left: 0;
 }
 
+/* line 846, ../scss/screen.scss */
 .older-posts:hover,
 .newer-posts:hover {
-    border-color: #9EABB3;
+  border-color: #9EABB3;
 }
-
 
 /* ==========================================================================
    9. Footer - The bottom of every page
    ========================================================================== */
-
+/* line 855, ../scss/screen.scss */
 .site-footer {
-    position: relative;
-    margin: 8rem 0 0 0;
-    padding: 4rem 0;
-    border-top: #EBF2F6 1px solid;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.3rem;
-    line-height: 1.7em;
-    color: #BBC7CC;
-    text-align: center;
-    background: #F7FAFB;
+  position: relative;
+  margin: 8rem 0 0 0;
+  padding: 4rem 0;
+  border-top: #EBF2F6 1px solid;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.7em;
+  color: #BBC7CC;
+  text-align: center;
+  background: #F7FAFB;
 }
 
+/* line 868, ../scss/screen.scss */
 .site-footer a {
-    color: #BBC7CC;
-    text-decoration: underline;
+  color: #BBC7CC;
+  text-decoration: underline;
 }
 
+/* line 873, ../scss/screen.scss */
 .site-footer a:hover {
-    color: #50585D;
+  color: #50585D;
 }
 
+/* line 877, ../scss/screen.scss */
 .poweredby .icon-ghost {
-    font-weight: 700;
-    text-decoration: none;
+  font-weight: 700;
+  text-decoration: none;
 }
 
+/* line 882, ../scss/screen.scss */
 .poweredby .icon-ghost:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
+/* line 886, ../scss/screen.scss */
 .poweredby .icon-ghost:before {
-    font-size: 1rem;
-    margin-right: 0.2em;
+  font-size: 1rem;
+  margin-right: 0.2em;
 }
 
 /* The subscribe icon on the footer */
+/* line 892, ../scss/screen.scss */
 .subscribe {
-    width: 28px;
-    height: 28px;
-    position: absolute;
-    top: -14px;
-    left: 50%;
-    margin-left: -15px;
-    border: #EBF2F6 1px solid;
-    text-align: center;
-    line-height: 2.4rem;
-    border-radius: 50px;
-    background: #fff;
-    transition: box-shadow 0.5s;
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  margin-left: -15px;
+  border: #EBF2F6 1px solid;
+  text-align: center;
+  line-height: 2.4rem;
+  border-radius: 50px;
+  background: #fff;
+  transition: box-shadow 0.5s;
 }
 
 /* The RSS icon, inserted via icon font */
+/* line 908, ../scss/screen.scss */
 .subscribe:before {
-    color: #D2DEE3;
-    font-size: 10px;
-    position: absolute;
-    top: 9px;
-    left: 9px;
-    font-weight: bold;
-    transition: color 0.5s ease;
+  color: #D2DEE3;
+  font-size: 10px;
+  position: absolute;
+  top: 9px;
+  left: 9px;
+  font-weight: bold;
+  transition: color 0.5s ease;
 }
 
 /* Add a box shadow to on hover */
+/* line 919, ../scss/screen.scss */
 .subscribe:hover {
-    box-shadow: rgba(0,0,0,0.05) 0 0 0 3px;
-    transition: box-shadow 0.25s;
+  box-shadow: rgba(0, 0, 0, 0.05) 0 0 0 3px;
+  transition: box-shadow 0.25s;
 }
 
+/* line 924, ../scss/screen.scss */
 .subscribe:hover:before {
-    color: #50585D;
+  color: #50585D;
 }
 
 /* CSS tooltip saying "Subscribe!" - initially hidden */
+/* line 929, ../scss/screen.scss */
 .tooltip {
-    opacity:0;
-    display: inline-block;
-    padding: 4px 8px 5px 8px;
-    position:absolute;
-    top: -23px;
-    left: -21px;
-    color: rgba(255,255,255,0.9);
-    font-size: 1.1rem;
-    line-height: 1em;
-    text-align: center;
-    background: #50585D;
-    border-radius:20px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-    transition: opacity 0.3s ease, top 0.3s ease;
+  opacity: 0;
+  display: inline-block;
+  padding: 4px 8px 5px 8px;
+  position: absolute;
+  top: -23px;
+  left: -21px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  line-height: 1em;
+  text-align: center;
+  background: #50585D;
+  border-radius: 20px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.3s ease, top 0.3s ease;
 }
 
 /* The little chiclet arrow under the tooltip, pointing down */
+/* line 947, ../scss/screen.scss */
 .tooltip:after {
-    content:"";
-    border-width:5px 5px 0 5px;
-    border-style:solid;
-    border-color: #50585D transparent;
-    display:block;
-    position:absolute;
-    bottom:-4px;
-    left:50%;
-    margin-left:-5px;
-    z-index: 220;
-    width:0;
+  content: "";
+  border-width: 5px 5px 0 5px;
+  border-style: solid;
+  border-color: #50585D transparent;
+  display: block;
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  margin-left: -5px;
+  z-index: 220;
+  width: 0;
 }
 
 /* On hover, show the tooltip! */
+/* line 962, ../scss/screen.scss */
 .subscribe:hover .tooltip {
-    opacity: 1;
-    top: -33px;
+  opacity: 1;
+  top: -33px;
 }
-
 
 /* ==========================================================================
    10. Media Queries - Smaller than 900px
    ========================================================================== */
-
 @media only screen and (max-width: 900px) {
+  /* line 974, ../scss/screen.scss */
+  blockquote {
+    margin-left: 0;
+  }
 
-    blockquote {
-        margin-left: 0;
-    }
+  /* line 978, ../scss/screen.scss */
+  .site-head {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height: auto;
+    min-height: 240px;
+    padding: 15% 0;
+  }
 
-    .site-head {
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        height: auto;
-        min-height: 240px;
-        padding: 15% 0;
-    }
+  /* line 987, ../scss/screen.scss */
+  .blog-title {
+    font-size: 4rem;
+    letter-spacing: -1px;
+  }
 
-    .blog-title {
-        font-size: 4rem;
-        letter-spacing: -1px;
-    }
+  /* line 992, ../scss/screen.scss */
+  .blog-description {
+    font-size: 1.7rem;
+    line-height: 1.5em;
+  }
 
-    .blog-description {
-        font-size: 1.7rem;
-        line-height: 1.5em;
-    }
+  /* line 997, ../scss/screen.scss */
+  .post {
+    font-size: 0.9em;
+    line-height: 1.6em;
+  }
 
-    .post {
-        font-size: 0.9em;
-        line-height: 1.6em;
-    }
+  /* line 1002, ../scss/screen.scss */
+  .post-template .post {
+    padding-bottom: 1rem;
+  }
 
-    .post-template .post {
-        padding-bottom: 1rem;
-    }
+  /* line 1006, ../scss/screen.scss */
+  .post-template .post-header {
+    padding: 40px 0;
+  }
 
-    .post-template .post-header {
-        padding: 40px 0;
-    }
+  /* line 1010, ../scss/screen.scss */
+  h1 {
+    font-size: 4.8rem;
+    text-indent: -2px;
+  }
 
-    h1 {
-        font-size: 4.8rem;
-        text-indent: -2px;
-    }
+  /* line 1015, ../scss/screen.scss */
+  h2 {
+    font-size: 3.8rem;
+  }
 
-    h2 {
-        font-size: 3.8rem;
-    }
+  /* line 1019, ../scss/screen.scss */
+  h3 {
+    font-size: 3.3rem;
+  }
 
-    h3 {
-        font-size: 3.3rem;
-    }
-
-    h4 {
-        font-size: 2.8rem;
-    }
-
+  /* line 1023, ../scss/screen.scss */
+  h4 {
+    font-size: 2.8rem;
+  }
 }
-
 /* ==========================================================================
    11. Media Queries - Smaller than 500px
    ========================================================================== */
-
-
 @media only screen and (max-width: 500px) {
+  /* line 1036, ../scss/screen.scss */
+  .blog-logo img {
+    max-height: 80px;
+  }
 
-    .blog-logo img {
-        max-height: 80px;
-    }
+  /* line 1041, ../scss/screen.scss */
+  .inner,
+  .pagination {
+    width: auto;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
 
-    .inner,
-    .pagination {
-        width: auto;
-        margin-left: 16px;
-        margin-right: 16px;
-    }
+  /* line 1047, ../scss/screen.scss */
+  .post {
+    width: auto;
+    margin-left: 16px;
+    margin-right: 16px;
+    font-size: 0.8em;
+    line-height: 1.6em;
+  }
 
-    .post {
-        width:auto;
-        margin-left: 16px;
-        margin-right: 16px;
-        font-size: 0.8em;
-        line-height: 1.6em;
-    }
+  /* line 1055, ../scss/screen.scss */
+  .site-head {
+    padding: 10% 0;
+  }
 
-    .site-head {
-        padding: 10% 0;
-    }
+  /* line 1059, ../scss/screen.scss */
+  .blog-title {
+    font-size: 3rem;
+  }
 
-    .blog-title {
-        font-size: 3rem;
-    }
+  /* line 1063, ../scss/screen.scss */
+  .blog-description {
+    font-size: 1.5rem;
+  }
 
-    .blog-description {
-        font-size: 1.5rem;
-    }
+  /* line 1068, ../scss/screen.scss */
+  h1, h2 {
+    font-size: 3rem;
+    line-height: 1.1em;
+    letter-spacing: -1px;
+  }
 
+  /* line 1074, ../scss/screen.scss */
+  h3 {
+    font-size: 2.8rem;
+  }
 
-    h1, h2 {
-        font-size: 3rem;
-        line-height: 1.1em;
-        letter-spacing: -1px;
-    }
+  /* line 1078, ../scss/screen.scss */
+  h4 {
+    font-size: 2.3rem;
+  }
 
-    h3 {
-        font-size: 2.8rem;
-    }
+  /* line 1082, ../scss/screen.scss */
+  .post-template .post {
+    padding-bottom: 0;
+  }
 
-    h4 {
-        font-size: 2.3rem;
-    }
+  /* line 1086, ../scss/screen.scss */
+  .post-template .post-header {
+    padding: 30px 0;
+  }
 
-    .post-template .post {
-        padding-bottom: 0;
-    }
+  /* line 1090, ../scss/screen.scss */
+  .post-content img {
+    padding: 0;
+  }
 
-    .post-template .post-header {
-        padding: 30px 0;
-    }
+  /* line 1094, ../scss/screen.scss */
+  .post-content .full-img {
+    width: auto;
+    width: calc(100% + 32px);
+    /* expand with to image + margins */
+    margin: 0 -16px;
+    /* get rid of margins */
+    min-width: 0;
+    max-width: 112%;
+    /* fallback when calc doesn't work */
+  }
 
-    .post-content img {
-        padding: 0;
-    }
+  /* line 1102, ../scss/screen.scss */
+  .post-meta {
+    font-size: 1.3rem;
+  }
 
-    .post-content .full-img {
-        width: auto;
-        width: calc(100% + 32px); /* expand with to image + margins */
-        margin: 0 -16px; /* get rid of margins */
-        min-width: 0;
-        max-width: 112%; /* fallback when calc doesn't work */
-    }
+  /* line 1106, ../scss/screen.scss */
+  .post-footer {
+    padding: 4rem 0;
+    text-align: center;
+  }
 
-    .post-meta {
-        font-size: 1.3rem;
-    }
+  /* line 1111, ../scss/screen.scss */
+  .post-footer .author {
+    margin: 0 0 2rem 0;
+    padding: 0 0 1.6rem 0;
+    border-bottom: #EBF2F6 1px dashed;
+  }
 
-    .post-footer {
-        padding: 4rem 0;
-        text-align: center;
-    }
+  /* line 1117, ../scss/screen.scss */
+  .post-footer .share {
+    position: static;
+    width: auto;
+  }
 
-    .post-footer .author {
-        margin: 0 0 2rem 0;
-        padding: 0 0 1.6rem 0;
-        border-bottom: #EBF2F6 1px dashed;
-    }
+  /* line 1122, ../scss/screen.scss */
+  .post-footer .share a {
+    margin: 1.4rem 0.8rem 0 0.8rem;
+  }
 
-    .post-footer .share {
-        position: static;
-        width: auto;
-    }
+  /* line 1127, ../scss/screen.scss */
+  .older-posts,
+  .newer-posts {
+    position: static;
+    margin: 10px 0;
+  }
 
-    .post-footer .share a {
-        margin: 1.4rem 0.8rem 0 0.8rem;
-    }
+  /* line 1132, ../scss/screen.scss */
+  .page-number {
+    display: block;
+  }
 
-    .older-posts,
-    .newer-posts {
-        position: static;
-        margin: 10px 0;
-    }
-
-    .page-number {
-        display: block;
-    }
-
-    .site-footer {
-        margin-top: 6rem;
-        font-size: 1.1rem;
-    }
-
+  /* line 1136, ../scss/screen.scss */
+  .site-footer {
+    margin-top: 6rem;
+    font-size: 1.1rem;
+  }
 }
-
 /* ==========================================================================
    End of file. Media queries should be the last thing here. Do not add stuff
    below this point, or it will probably fuck everything up.
