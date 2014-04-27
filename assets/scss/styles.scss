@@ -1,3 +1,5 @@
+@import "compass/css3";
+
 /* Variables */
 $red : #e74c3c;
 $black : #333;
@@ -5,6 +7,10 @@ $black : #333;
 /* Generic */
 body {
     background-color: #333;
+}
+
+button, .button, a, span {
+    @include transition(.3s all);
 }
 
 /* Foundation row */
@@ -24,7 +30,7 @@ body {
             h1 {
                 line-height: 60px;
                 text-transform: uppercase;
-                font-size: 1.4rem;
+                font-size: 1.8rem;
                 a {
                     font-weight: bold;
                 }
@@ -51,6 +57,23 @@ body {
     }
 }
 
+/* Social network */
+
+.blog-network {
+    a {
+        float: right;
+        background: rgba(231, 76, 60, 0.89);
+        color: white;
+        padding: 7px 10px;
+        font-size: 36px;
+        margin: 0 0 15px 0px;
+        &:hover {
+            color: $red;
+            background: lighten($red, 50%);
+        }
+    }
+}
+
 /* Sidebar for large */
 .site-head {
     .blog-description {
@@ -71,7 +94,7 @@ body {
     height: 100%;
     top: 0;
     left: 0;
-    background: rgba(153,204,51,0.9);
+    background: rgba(231, 76, 60, 0.89);
     z-index: 9999;
 }
 

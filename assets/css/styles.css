@@ -1,53 +1,61 @@
 /* Variables */
 /* Generic */
-/* line 6, ../scss/styles.scss */
+/* line 8, ../scss/styles.scss */
 body {
   background-color: #333;
 }
 
+/* line 12, ../scss/styles.scss */
+button, .button, a, span {
+  -webkit-transition: 0.3s all;
+  -moz-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
 /* Foundation row */
-/* line 11, ../scss/styles.scss */
+/* line 17, ../scss/styles.scss */
 .row {
   max-width: 72.5em;
 }
 
 /* Topbar for mobile */
-/* line 16, ../scss/styles.scss */
+/* line 22, ../scss/styles.scss */
 .top-bar {
   overflow: hidden;
   height: 60px;
   line-height: 60px;
 }
-/* line 20, ../scss/styles.scss */
+/* line 26, ../scss/styles.scss */
 .top-bar .title-area {
   float: none;
 }
-/* line 22, ../scss/styles.scss */
+/* line 28, ../scss/styles.scss */
 .top-bar .title-area .name {
   height: 60px;
 }
-/* line 24, ../scss/styles.scss */
+/* line 30, ../scss/styles.scss */
 .top-bar .title-area .name h1 {
   line-height: 60px;
   text-transform: uppercase;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
 }
-/* line 28, ../scss/styles.scss */
+/* line 34, ../scss/styles.scss */
 .top-bar .title-area .name h1 a {
   font-weight: bold;
 }
-/* line 34, ../scss/styles.scss */
+/* line 40, ../scss/styles.scss */
 .top-bar .toggle-topbar {
   display: block;
 }
-/* line 36, ../scss/styles.scss */
+/* line 42, ../scss/styles.scss */
 .top-bar .toggle-topbar .fi-list {
   height: 60px;
   line-height: 60px;
   font-size: 2rem;
   padding: 0 20px;
 }
-/* line 45, ../scss/styles.scss */
+/* line 51, ../scss/styles.scss */
 .top-bar .top-bar-section .right li {
   /* 
   @media screen and (min-width: 40.063em) {
@@ -55,8 +63,24 @@ body {
 } */
 }
 
+/* Social network */
+/* line 63, ../scss/styles.scss */
+.blog-network a {
+  float: right;
+  background: rgba(231, 76, 60, 0.89);
+  color: white;
+  padding: 7px 10px;
+  font-size: 36px;
+  margin: 0 0 15px 0px;
+}
+/* line 70, ../scss/styles.scss */
+.blog-network a:hover {
+  color: #e74c3c;
+  background: white;
+}
+
 /* Sidebar for large */
-/* line 56, ../scss/styles.scss */
+/* line 79, ../scss/styles.scss */
 .site-head .blog-description {
   margin: 0.5rem 0 1rem;
   color: white;
@@ -66,19 +90,19 @@ body {
 
 /** Crazy overlay menu **/
 /* Overlay style */
-/* line 68, ../scss/styles.scss */
+/* line 91, ../scss/styles.scss */
 .overlay {
   position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  background: rgba(153, 204, 51, 0.9);
+  background: rgba(231, 76, 60, 0.89);
   z-index: 9999;
 }
 
 /* Overlay closing cross */
-/* line 79, ../scss/styles.scss */
+/* line 102, ../scss/styles.scss */
 .overlay .overlay-close {
   width: 80px;
   height: 80px;
@@ -95,7 +119,7 @@ body {
 }
 
 /* Menu style */
-/* line 95, ../scss/styles.scss */
+/* line 118, ../scss/styles.scss */
 .overlay nav {
   text-align: center;
   position: relative;
@@ -105,7 +129,7 @@ body {
   transform: translateY(-50%);
 }
 
-/* line 104, ../scss/styles.scss */
+/* line 127, ../scss/styles.scss */
 .overlay ul {
   list-style: none;
   padding: 0;
@@ -115,7 +139,7 @@ body {
   position: relative;
 }
 
-/* line 113, ../scss/styles.scss */
+/* line 136, ../scss/styles.scss */
 .overlay ul li {
   display: block;
   height: 20%;
@@ -125,7 +149,7 @@ body {
   backface-visibility: hidden;
 }
 
-/* line 122, ../scss/styles.scss */
+/* line 145, ../scss/styles.scss */
 .overlay ul li a {
   font-size: 54px;
   font-weight: 300;
@@ -135,14 +159,14 @@ body {
   transition: color 0.2s;
 }
 
-/* line 132, ../scss/styles.scss */
+/* line 155, ../scss/styles.scss */
 .overlay ul li a:hover,
 .overlay ul li a:focus {
   color: #f0f0f0;
 }
 
 /* Effects */
-/* line 137, ../scss/styles.scss */
+/* line 160, ../scss/styles.scss */
 .overlay-scale {
   visibility: hidden;
   opacity: 0;
@@ -152,7 +176,7 @@ body {
   transition: transform 0.2s, opacity 0.2s, visibility 0s 0.2s;
 }
 
-/* line 146, ../scss/styles.scss */
+/* line 169, ../scss/styles.scss */
 .overlay-scale.open {
   visibility: visible;
   opacity: 1;
@@ -163,18 +187,18 @@ body {
 }
 
 @media screen and (max-height: 30.5em) {
-  /* line 156, ../scss/styles.scss */
+  /* line 179, ../scss/styles.scss */
   .overlay nav {
     height: 70%;
     font-size: 34px;
   }
 
-  /* line 160, ../scss/styles.scss */
+  /* line 183, ../scss/styles.scss */
   .overlay ul li {
     min-height: 34px;
   }
 }
-/* line 171, ../scss/styles.scss */
+/* line 194, ../scss/styles.scss */
 .main-column {
   background: #f7f7f7;
 }
