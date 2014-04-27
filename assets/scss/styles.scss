@@ -1,0 +1,48 @@
+$red : #e74c3c;
+$black : #333;
+
+body {
+    background-color: #333;
+}
+
+.top-bar {
+    overflow: hidden;
+    .title-area {
+        float: none;
+        .name {
+            h1 {
+                text-transform: uppercase;
+                font-size: 1.4rem;
+                a {
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    .toggle-topbar {
+        display: block;
+    }
+    .top-bar-section {
+        .right {
+            li {/* 
+                @media screen and (min-width: 40.063em) {
+                    border-left: 1px solid left;
+              } */
+            }
+        }
+    }
+}
+
+.site-head {
+    .blog-description {
+        margin: 0.5rem 0 1rem;
+        color: white;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        
+    }
+}
+
+.main-column {
+    background: #f7f7f7;
+}
