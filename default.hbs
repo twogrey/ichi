@@ -14,9 +14,13 @@
 
     <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
 
+    <script type="text/javascript" src="{{asset "js/vendor/fastclick.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/vendor/modernizr.js"}}"></script>
+
     {{! Styles'n'Scripts }}
     <link rel="stylesheet" type="text/css" href="{{asset "css/normalize.css"}}" />
     <link rel="stylesheet" type="text/css" href="{{asset "css/foundation.min.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "fonts/foundation-icons/foundation-icons.css"}}" />
     <link rel="stylesheet" type="text/css" href="{{asset "css/styles.css"}}" />
     <!-- <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" /> -->
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:700,400|Source+Sans+Pro:300,400,600,700,900,300italic,400italic,600italic,700italic,900italic" />
@@ -32,16 +36,20 @@
       <h1><a href="#">{{@blog.title}}</a></h1>
     </li>
      <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+    <li class="toggle-topbar"><a href="#" id="trigger-overlay" class="fi-list"></a></li>
   </ul>
 
-  <section class="top-bar-section">
-    <!-- Right Nav Section -->
-    <ul class="right">
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </section>
+<div class="overlay overlay-scale">
+    <button type="button" class="overlay-close">Close</button>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</div>
+
 </nav>
 
 <div class="row">
@@ -87,6 +95,9 @@
     <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
 
     <script type="text/javascript" src="{{asset "js/foundation.min.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/overlay/snap.svg-min.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/overlay/classie.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/overlay/demo1.js"}}"></script>
 
     <script>
       $(document).foundation();

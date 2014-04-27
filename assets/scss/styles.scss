@@ -1,16 +1,28 @@
+/* Variables */
 $red : #e74c3c;
 $black : #333;
 
+/* Generic */
 body {
     background-color: #333;
 }
 
+/* Foundation row */
+.row {
+    max-width: 72.5em;
+}
+
+/* Topbar for mobile */
 .top-bar {
     overflow: hidden;
+    height: 60px;
+    line-height: 60px;
     .title-area {
         float: none;
         .name {
+            height: 60px;
             h1 {
+                line-height: 60px;
                 text-transform: uppercase;
                 font-size: 1.4rem;
                 a {
@@ -21,6 +33,12 @@ body {
     }
     .toggle-topbar {
         display: block;
+        .fi-list {
+            height: 60px;
+            line-height: 60px;
+            font-size: 2rem;
+            padding: 0 20px;
+        }
     }
     .top-bar-section {
         .right {
@@ -33,6 +51,7 @@ body {
     }
 }
 
+/* Sidebar for large */
 .site-head {
     .blog-description {
         margin: 0.5rem 0 1rem;
@@ -42,6 +61,112 @@ body {
         
     }
 }
+
+/** Crazy overlay menu **/
+
+/* Overlay style */
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(153,204,51,0.9);
+    z-index: 9999;
+}
+
+/* Overlay closing cross */
+.overlay .overlay-close {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    overflow: hidden;
+    border: none;
+    background: url(../images/cross.png) no-repeat center center;
+    text-indent: 200%;
+    color: transparent;
+    outline: none;
+    z-index: 100;
+}
+
+/* Menu style */
+.overlay nav {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    height: 60%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.overlay ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: inline-block;
+    height: 100%;
+    position: relative;
+}
+
+.overlay ul li {
+    display: block;
+    height: 20%;
+    height: calc(100% / 5);
+    min-height: 54px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.overlay ul li a {
+    font-size: 54px;
+    font-weight: 300;
+    display: block;
+    color: #fff;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+.overlay ul li a:hover,
+.overlay ul li a:focus {
+    color: #f0f0f0;
+}
+
+/* Effects */
+.overlay-scale {
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+    -webkit-transition: -webkit-transform 0.2s, opacity 0.2s, visibility 0s 0.2s;
+    transition: transform 0.2s, opacity 0.2s, visibility 0s 0.2s;
+}
+
+.overlay-scale.open {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);    
+    -webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
+    transition: transform 0.4s, opacity 0.4s;
+}
+
+@media screen and (max-height: 30.5em) {
+    .overlay nav {
+        height: 70%;
+        font-size: 34px;
+    }
+    .overlay ul li {
+        min-height: 34px;
+    }
+}
+
+
+
+
+
+
 
 .main-column {
     background: #f7f7f7;

@@ -1,30 +1,53 @@
-/* line 4, ../scss/styles.scss */
+/* Variables */
+/* Generic */
+/* line 6, ../scss/styles.scss */
 body {
   background-color: #333;
 }
 
-/* line 8, ../scss/styles.scss */
+/* Foundation row */
+/* line 11, ../scss/styles.scss */
+.row {
+  max-width: 72.5em;
+}
+
+/* Topbar for mobile */
+/* line 16, ../scss/styles.scss */
 .top-bar {
   overflow: hidden;
+  height: 60px;
+  line-height: 60px;
 }
-/* line 10, ../scss/styles.scss */
+/* line 20, ../scss/styles.scss */
 .top-bar .title-area {
   float: none;
 }
-/* line 13, ../scss/styles.scss */
+/* line 22, ../scss/styles.scss */
+.top-bar .title-area .name {
+  height: 60px;
+}
+/* line 24, ../scss/styles.scss */
 .top-bar .title-area .name h1 {
+  line-height: 60px;
   text-transform: uppercase;
   font-size: 1.4rem;
 }
-/* line 16, ../scss/styles.scss */
+/* line 28, ../scss/styles.scss */
 .top-bar .title-area .name h1 a {
   font-weight: bold;
 }
-/* line 22, ../scss/styles.scss */
+/* line 34, ../scss/styles.scss */
 .top-bar .toggle-topbar {
   display: block;
 }
-/* line 27, ../scss/styles.scss */
+/* line 36, ../scss/styles.scss */
+.top-bar .toggle-topbar .fi-list {
+  height: 60px;
+  line-height: 60px;
+  font-size: 2rem;
+  padding: 0 20px;
+}
+/* line 45, ../scss/styles.scss */
 .top-bar .top-bar-section .right li {
   /* 
   @media screen and (min-width: 40.063em) {
@@ -32,7 +55,8 @@ body {
 } */
 }
 
-/* line 37, ../scss/styles.scss */
+/* Sidebar for large */
+/* line 56, ../scss/styles.scss */
 .site-head .blog-description {
   margin: 0.5rem 0 1rem;
   color: white;
@@ -40,7 +64,117 @@ body {
   font-size: 0.8rem;
 }
 
-/* line 46, ../scss/styles.scss */
+/** Crazy overlay menu **/
+/* Overlay style */
+/* line 68, ../scss/styles.scss */
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(153, 204, 51, 0.9);
+  z-index: 9999;
+}
+
+/* Overlay closing cross */
+/* line 79, ../scss/styles.scss */
+.overlay .overlay-close {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  overflow: hidden;
+  border: none;
+  background: url(../images/cross.png) no-repeat center center;
+  text-indent: 200%;
+  color: transparent;
+  outline: none;
+  z-index: 100;
+}
+
+/* Menu style */
+/* line 95, ../scss/styles.scss */
+.overlay nav {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  height: 60%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* line 104, ../scss/styles.scss */
+.overlay ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+  height: 100%;
+  position: relative;
+}
+
+/* line 113, ../scss/styles.scss */
+.overlay ul li {
+  display: block;
+  height: 20%;
+  height: calc(100% / 5);
+  min-height: 54px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* line 122, ../scss/styles.scss */
+.overlay ul li a {
+  font-size: 54px;
+  font-weight: 300;
+  display: block;
+  color: #fff;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+/* line 132, ../scss/styles.scss */
+.overlay ul li a:hover,
+.overlay ul li a:focus {
+  color: #f0f0f0;
+}
+
+/* Effects */
+/* line 137, ../scss/styles.scss */
+.overlay-scale {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+  -webkit-transition: -webkit-transform 0.2s, opacity 0.2s, visibility 0s 0.2s;
+  transition: transform 0.2s, opacity 0.2s, visibility 0s 0.2s;
+}
+
+/* line 146, ../scss/styles.scss */
+.overlay-scale.open {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
+  transition: transform 0.4s, opacity 0.4s;
+}
+
+@media screen and (max-height: 30.5em) {
+  /* line 156, ../scss/styles.scss */
+  .overlay nav {
+    height: 70%;
+    font-size: 34px;
+  }
+
+  /* line 160, ../scss/styles.scss */
+  .overlay ul li {
+    min-height: 34px;
+  }
+}
+/* line 171, ../scss/styles.scss */
 .main-column {
   background: #f7f7f7;
 }
