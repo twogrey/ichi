@@ -8,6 +8,9 @@ $black : #333;
 body {
     background-color: #333;
     font-family: "open sans", "helvetica neue", helvetica, arial, sans-serif;
+    > .row {
+        max-width: 100%;
+    }
 }
 
 h1 {
@@ -67,7 +70,7 @@ button, .button, a, span, li, .head-area:after {
 .blog-network {
     a {
         float: right;
-        background: rgba(51, 51, 51, 0.6);
+        background: rgba(51, 51, 51, 0.8);
         color: white;
         padding: 5px 10px;
         font-size: 36px;
@@ -109,9 +112,21 @@ button, .button, a, span, li, .head-area:after {
         z-index: 1;
         background: rgba(0, 0, 0, 0.8);
     }
+    @media screen and (min-width: 64.063em) {
+        margin-top: 0;
+        padding: 0 1.1rem;
+        position: fixed;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
 }
 
 .site-head {
+    @media screen and (min-width: 64.063em) {
+        padding-top: 30px;
+
+    }
     text-align: center;
     z-index: 2;
     position: relative;
@@ -253,4 +268,8 @@ button, .button, a, span, li, .head-area:after {
 
 .main-column {
     background: #f7f7f7;
+    @media screen and (min-width: 64.063em) {
+        position: absolute;
+        height: 100%;
+    }
 }
