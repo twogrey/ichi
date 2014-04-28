@@ -3,10 +3,16 @@
 /* line 8, ../scss/styles.scss */
 body {
   background-color: #333;
+  font-family: "open sans", "helvetica neue", helvetica, arial, sans-serif;
 }
 
-/* line 12, ../scss/styles.scss */
-button, .button, a, span {
+/* line 13, ../scss/styles.scss */
+h1 {
+  font-family: "source sans pro", "helvetica neue", helvetica, arial, sans-serif;
+}
+
+/* line 17, ../scss/styles.scss */
+button, .button, a, span, li, .head-area {
   -webkit-transition: 0.3s all;
   -moz-transition: 0.3s all;
   -o-transition: 0.3s all;
@@ -14,83 +20,144 @@ button, .button, a, span {
 }
 
 /* Foundation row */
-/* line 17, ../scss/styles.scss */
+/* line 22, ../scss/styles.scss */
 .row {
   max-width: 72.5em;
 }
 
 /* Topbar for mobile */
-/* line 22, ../scss/styles.scss */
+/* line 27, ../scss/styles.scss */
 .top-bar {
-  overflow: hidden;
+  overflow: visible;
+  z-index: 9998;
   height: 60px;
   line-height: 60px;
 }
-/* line 26, ../scss/styles.scss */
+/* line 32, ../scss/styles.scss */
 .top-bar .title-area {
   float: none;
 }
-/* line 28, ../scss/styles.scss */
+/* line 34, ../scss/styles.scss */
 .top-bar .title-area .name {
   height: 60px;
 }
-/* line 30, ../scss/styles.scss */
-.top-bar .title-area .name h1 {
-  line-height: 60px;
-  text-transform: uppercase;
-  font-size: 1.8rem;
-}
-/* line 34, ../scss/styles.scss */
-.top-bar .title-area .name h1 a {
-  font-weight: bold;
-}
-/* line 40, ../scss/styles.scss */
+/* line 38, ../scss/styles.scss */
 .top-bar .toggle-topbar {
   display: block;
+  background: rgba(51, 51, 51, 0.7);
 }
-/* line 42, ../scss/styles.scss */
+/* line 41, ../scss/styles.scss */
 .top-bar .toggle-topbar .fi-list {
   height: 60px;
   line-height: 60px;
   font-size: 2rem;
   padding: 0 20px;
 }
-/* line 51, ../scss/styles.scss */
+/* line 47, ../scss/styles.scss */
+.top-bar .toggle-topbar:hover {
+  background: #4d4d4d;
+}
+/* line 53, ../scss/styles.scss */
 .top-bar .top-bar-section .right li {
   /* 
   @media screen and (min-width: 40.063em) {
       border-left: 1px solid left;
 } */
 }
+/* line 60, ../scss/styles.scss */
+.top-bar:hover + .row .head-area {
+  -webkit-filter: grayscale(0);
+  -moz-filter: grayscale(0);
+  filter: grayscale(0);
+}
 
 /* Social network */
-/* line 63, ../scss/styles.scss */
+/* line 68, ../scss/styles.scss */
 .blog-network a {
   float: right;
-  background: rgba(231, 76, 60, 0.89);
+  background: rgba(51, 51, 51, 0.7);
   color: white;
   padding: 7px 10px;
   font-size: 36px;
   margin: 0 0 15px 0px;
 }
-/* line 70, ../scss/styles.scss */
+/* line 75, ../scss/styles.scss */
 .blog-network a:hover {
-  color: #e74c3c;
-  background: white;
+  background: #4d4d4d;
 }
 
-/* Sidebar for large */
-/* line 79, ../scss/styles.scss */
+/* Sidebar */
+/* line 82, ../scss/styles.scss */
+.head-area {
+  margin-top: -60px;
+  padding-top: 60px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+/* line 89, ../scss/styles.scss */
+.head-area:hover {
+  -webkit-filter: grayscale(0);
+  -moz-filter: grayscale(0);
+  filter: grayscale(0);
+}
+/* line 92, ../scss/styles.scss */
+.head-area:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* line 104, ../scss/styles.scss */
+.site-head {
+  text-align: center;
+  z-index: 2;
+  position: relative;
+}
+/* line 108, ../scss/styles.scss */
 .site-head .blog-description {
-  margin: 0.5rem 0 1rem;
+  margin: 1.3rem 0 1rem;
   color: white;
+  font-weight: 300;
+}
+/* line 113, ../scss/styles.scss */
+.site-head .blog-logo {
+  display: inline-block;
+}
+/* line 115, ../scss/styles.scss */
+.site-head .blog-logo img {
+  width: 100px;
+  border: 1px solid white;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+  border-radius: 100px;
+}
+/* line 121, ../scss/styles.scss */
+.site-head .blog-title {
+  margin-bottom: 1rem;
+  font-weight: 300;
   text-transform: uppercase;
-  font-size: 0.8rem;
+  color: white;
+}
+/* line 128, ../scss/styles.scss */
+.site-head hr {
+  width: 100px;
+  margin: 0 auto;
 }
 
 /** Crazy overlay menu **/
 /* Overlay style */
-/* line 91, ../scss/styles.scss */
+/* line 137, ../scss/styles.scss */
 .overlay {
   position: fixed;
   width: 100%;
@@ -102,7 +169,7 @@ button, .button, a, span {
 }
 
 /* Overlay closing cross */
-/* line 102, ../scss/styles.scss */
+/* line 148, ../scss/styles.scss */
 .overlay .overlay-close {
   width: 80px;
   height: 80px;
@@ -119,7 +186,7 @@ button, .button, a, span {
 }
 
 /* Menu style */
-/* line 118, ../scss/styles.scss */
+/* line 164, ../scss/styles.scss */
 .overlay nav {
   text-align: center;
   position: relative;
@@ -129,7 +196,7 @@ button, .button, a, span {
   transform: translateY(-50%);
 }
 
-/* line 127, ../scss/styles.scss */
+/* line 173, ../scss/styles.scss */
 .overlay ul {
   list-style: none;
   padding: 0;
@@ -139,7 +206,7 @@ button, .button, a, span {
   position: relative;
 }
 
-/* line 136, ../scss/styles.scss */
+/* line 182, ../scss/styles.scss */
 .overlay ul li {
   display: block;
   height: 20%;
@@ -149,7 +216,7 @@ button, .button, a, span {
   backface-visibility: hidden;
 }
 
-/* line 145, ../scss/styles.scss */
+/* line 191, ../scss/styles.scss */
 .overlay ul li a {
   font-size: 54px;
   font-weight: 300;
@@ -159,14 +226,14 @@ button, .button, a, span {
   transition: color 0.2s;
 }
 
-/* line 155, ../scss/styles.scss */
+/* line 201, ../scss/styles.scss */
 .overlay ul li a:hover,
 .overlay ul li a:focus {
   color: #f0f0f0;
 }
 
 /* Effects */
-/* line 160, ../scss/styles.scss */
+/* line 206, ../scss/styles.scss */
 .overlay-scale {
   visibility: hidden;
   opacity: 0;
@@ -176,7 +243,7 @@ button, .button, a, span {
   transition: transform 0.2s, opacity 0.2s, visibility 0s 0.2s;
 }
 
-/* line 169, ../scss/styles.scss */
+/* line 215, ../scss/styles.scss */
 .overlay-scale.open {
   visibility: visible;
   opacity: 1;
@@ -187,18 +254,18 @@ button, .button, a, span {
 }
 
 @media screen and (max-height: 30.5em) {
-  /* line 179, ../scss/styles.scss */
+  /* line 225, ../scss/styles.scss */
   .overlay nav {
     height: 70%;
     font-size: 34px;
   }
 
-  /* line 183, ../scss/styles.scss */
+  /* line 229, ../scss/styles.scss */
   .overlay ul li {
     min-height: 34px;
   }
 }
-/* line 194, ../scss/styles.scss */
+/* line 240, ../scss/styles.scss */
 .main-column {
   background: #f7f7f7;
 }

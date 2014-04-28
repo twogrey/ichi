@@ -7,9 +7,14 @@ $black : #333;
 /* Generic */
 body {
     background-color: #333;
+    font-family: "open sans", "helvetica neue", helvetica, arial, sans-serif;
 }
 
-button, .button, a, span {
+h1 {
+    font-family: "source sans pro", "helvetica neue", helvetica, arial, sans-serif;
+}
+
+button, .button, a, span, li, .head-area {
     @include transition(.3s all);
 }
 
@@ -20,30 +25,27 @@ button, .button, a, span {
 
 /* Topbar for mobile */
 .top-bar {
-    overflow: hidden;
+    overflow: visible;
+    z-index: 9998;
     height: 60px;
     line-height: 60px;
     .title-area {
         float: none;
         .name {
             height: 60px;
-            h1 {
-                line-height: 60px;
-                text-transform: uppercase;
-                font-size: 1.8rem;
-                a {
-                    font-weight: bold;
-                }
-            }
         }
     }
     .toggle-topbar {
         display: block;
+        background: rgba(51, 51, 51, 0.7);
         .fi-list {
             height: 60px;
             line-height: 60px;
             font-size: 2rem;
             padding: 0 20px;
+        }
+        &:hover {
+            background: lighten($black, 10%);
         }
     }
     .top-bar-section {
@@ -55,6 +57,9 @@ button, .button, a, span {
             }
         }
     }
+    &:hover + .row .head-area {
+        @include filter(grayscale(0));
+    }
 }
 
 /* Social network */
@@ -62,26 +67,67 @@ button, .button, a, span {
 .blog-network {
     a {
         float: right;
-        background: rgba(231, 76, 60, 0.89);
+        background: rgba(51, 51, 51, 0.7);
         color: white;
         padding: 7px 10px;
         font-size: 36px;
         margin: 0 0 15px 0px;
         &:hover {
-            color: $red;
-            background: lighten($red, 50%);
+            background: lighten($black, 10%);
         }
     }
 }
 
-/* Sidebar for large */
+/* Sidebar */
+.head-area {
+    margin-top: -60px;
+    padding-top: 60px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @include filter(grayscale(100%));
+    &:hover {
+        @include filter(grayscale(0));
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        background: rgba(0, 0, 0, 0.6);
+    }
+}
+
 .site-head {
+    text-align: center;
+    z-index: 2;
+    position: relative;
     .blog-description {
-        margin: 0.5rem 0 1rem;
+        margin: 1.3rem 0 1rem;
         color: white;
+        font-weight: 300;
+    }
+    .blog-logo {
+        display: inline-block;
+        img {
+            width: 100px;
+            border: 1px solid white;
+            @include border-radius(100px);
+        }
+    }
+    .blog-title {
+        margin-bottom: 1rem;
+        font-weight: 300;
         text-transform: uppercase;
-        font-size: 0.8rem;
-        
+        color: white;
+
+    }
+    hr {
+        width: 100px;
+        margin: 0 auto;
     }
 }
 
