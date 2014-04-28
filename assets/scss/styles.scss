@@ -14,7 +14,7 @@ h1 {
     font-family: "source sans pro", "helvetica neue", helvetica, arial, sans-serif;
 }
 
-button, .button, a, span, li, .head-area {
+button, .button, a, span, li, .head-area:after {
     @include transition(.3s all);
 }
 
@@ -37,7 +37,7 @@ button, .button, a, span, li, .head-area {
     }
     .toggle-topbar {
         display: block;
-        background: rgba(51, 51, 51, 0.7);
+        background: rgba(51, 51, 51, 0.8);
         .fi-list {
             height: 60px;
             line-height: 60px;
@@ -45,7 +45,7 @@ button, .button, a, span, li, .head-area {
             padding: 0 20px;
         }
         &:hover {
-            background: lighten($black, 10%);
+            background: $red;
         }
     }
     .top-bar-section {
@@ -57,8 +57,8 @@ button, .button, a, span, li, .head-area {
             }
         }
     }
-    &:hover + .row .head-area {
-        @include filter(grayscale(0));
+    &:hover + .row .head-area:after {
+        background: rgba(51, 51, 51, 0.65);
     }
 }
 
@@ -67,13 +67,22 @@ button, .button, a, span, li, .head-area {
 .blog-network {
     a {
         float: right;
-        background: rgba(51, 51, 51, 0.7);
+        background: rgba(51, 51, 51, 0.6);
         color: white;
-        padding: 7px 10px;
+        padding: 5px 10px;
         font-size: 36px;
         margin: 0 0 15px 0px;
         &:hover {
-            background: lighten($black, 10%);
+            background: $red;
+            margin-left: 7px;
+            margin-right: 7px;
+            @include border-radius(50px);
+        }
+        &:first-of-type:hover {
+            margin-right: 0;
+        }
+        &:last-of-type:hover {
+            margin-left: 0;
         }
     }
 }
@@ -85,9 +94,10 @@ button, .button, a, span, li, .head-area {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    @include filter(grayscale(100%));
     &:hover {
-        @include filter(grayscale(0));
+        &:after {
+            background: rgba(51, 51, 51, 0.65);
+        }
     }
     &:after {
         content: "";
@@ -97,7 +107,7 @@ button, .button, a, span, li, .head-area {
         top: 0;
         left: 0;
         z-index: 1;
-        background: rgba(0, 0, 0, 0.6);
+        background: rgba(0, 0, 0, 0.8);
     }
 }
 
@@ -112,10 +122,14 @@ button, .button, a, span, li, .head-area {
     }
     .blog-logo {
         display: inline-block;
+        @include transition(.6s);
         img {
             width: 100px;
             border: 1px solid white;
             @include border-radius(100px);
+        }
+        &:hover {
+            @include transform(rotate(360deg) scale(1.2));
         }
     }
     .blog-title {
