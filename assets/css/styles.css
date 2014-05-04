@@ -380,26 +380,28 @@ button, .button, a, span, li, .head-area:after, hr {
 }
 /* line 325, ../scss/styles.scss */
 .main-column .pagination {
+  position: relative;
   text-align: center;
 }
-/* line 327, ../scss/styles.scss */
+/* line 328, ../scss/styles.scss */
 .main-column .pagination a {
+  position: absolute;
   font-size: 1.25rem;
 }
-/* line 329, ../scss/styles.scss */
+/* line 331, ../scss/styles.scss */
 .main-column .pagination a:first-child {
-  float: left;
+  left: 0;
 }
-/* line 332, ../scss/styles.scss */
+/* line 334, ../scss/styles.scss */
 .main-column .pagination a:last-child {
-  float: right;
+  right: 0;
 }
-/* line 335, ../scss/styles.scss */
+/* line 337, ../scss/styles.scss */
 .main-column .pagination a:hover {
   color: white;
   background: #e74c3c;
 }
-/* line 340, ../scss/styles.scss */
+/* line 342, ../scss/styles.scss */
 .main-column .pagination .page-number {
   font-size: 1.5rem;
   font-weight: 300;

@@ -323,14 +323,16 @@ button, .button, a, span, li, .head-area:after, hr {
         height: 100%;
     }
     .pagination {
+        position: relative;
         text-align: center;
         a {
+            position: absolute;
             font-size: 1.25rem;
             &:first-child {
-                float: left;
+                left: 0;
             }
             &:last-child {
-                float: right;
+                right: 0;
             }
             &:hover {
                 color: white;
