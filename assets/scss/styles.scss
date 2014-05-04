@@ -6,7 +6,6 @@ $black : #333;
 
 /* Generic */
 body {
-    background-color: #333;
     font-family: "open sans", "helvetica neue", helvetica, arial, sans-serif;
     > .row {
         max-width: 100%;
@@ -314,8 +313,34 @@ button, .button, a, span, li, .head-area:after, hr {
 
 .main-column {
     background: #f7f7f7;
+    main {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 50px 0;
+    }
     @media screen and (min-width: 64.063em) {
         position: absolute;
         height: 100%;
+    }
+    .pagination {
+        text-align: center;
+        a {
+            font-size: 1.25rem;
+            &:first-child {
+                float: left;
+            }
+            &:last-child {
+                float: right;
+            }
+            &:hover {
+                color: white;
+                background: $red;
+            }
+        }
+        .page-number {
+            font-size: 1.5rem;
+            font-weight: 300;
+            line-height: 48px;
+        }
     }
 }
