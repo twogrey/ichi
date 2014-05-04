@@ -33,10 +33,21 @@ button, .button, a, span, li, .head-area:after, hr {
     z-index: 9998;
     height: 50px;
     line-height: 50px;
-    .title-area {
-        float: none;
-        .name {
+    .home {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(51, 51, 51, 0.8);
+        .fi-home {
+            color: white;
+            position: relative;
+            display: block;
+            padding: 0 15px;
+            width: 50px;
             height: 50px;
+            line-height: 50px;
+            font-size: 2rem;
         }
     }
     .toggle-topbar {
@@ -48,9 +59,9 @@ button, .button, a, span, li, .head-area:after, hr {
             line-height: 50px;
             font-size: 2rem;
         }
-        &:hover {
-            background: $red;
-        }
+    }
+    li a:hover {
+        background: $red;
     }
     .top-bar-section {
         .right {
@@ -65,7 +76,7 @@ button, .button, a, span, li, .head-area:after, hr {
         background: rgba(51, 51, 51, 0.65);
     }
     &:hover + .row hr {
-        border-color: $red;
+        border-color: white;
         width: 200px;
     }
 }
@@ -106,12 +117,15 @@ button, .button, a, span, li, .head-area:after, hr {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    hr {
+        border-color: $black;
+    }
     &:hover {
         &:after {
             background: rgba(51, 51, 51, 0.65);
         }
         hr {
-            border-color: $red;
+            border-color: white;
             width: 200px;
         }
     }
