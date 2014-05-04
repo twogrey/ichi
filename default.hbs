@@ -43,9 +43,10 @@
     <button type="button" class="overlay-close">Close</button>
     <nav>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="{{@blog.url}}">Home</a></li>
+            <li><a href="{{@blog.url}}/about">About</a></li>
+            <li><a href="{{@blog.url}}/contact">Contact</a></li>
+            <li><a href="{{@blog.url}}/download">Download</a></li>
         </ul>
     </nav>
 </div>
@@ -82,6 +83,12 @@
                 <a href="#" class="fi-social-twitter"></a>
                 <a href="#" class="fi-social-facebook"></a>
             </div>
+            <ul class="side-nav blog-menu show-for-large-up">
+              <li><a href="#">Link 1</a></li>
+              <li><a href="#">Link 2</a></li>
+              <li><a href="#">Link 3</a></li>
+              <li><a href="#">Link 4</a></li>
+            </ul>
         </div>
     </div>
 </header>

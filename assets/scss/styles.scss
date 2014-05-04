@@ -171,6 +171,25 @@ button, .button, a, span, li, .head-area:after, hr {
         width: 100px;
         margin: 0 auto;
     }
+    .blog-menu {
+        float: left;
+        clear: both;
+        width: 100%;
+        li {
+            font-size: 1rem;
+            a {
+                padding: 5px 0;
+                background: $black;
+                color: white;
+                text-transform: uppercase;
+                &:hover {
+                    color: white;
+                    background: $red;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
 }
 
 /** Crazy overlay menu **/
