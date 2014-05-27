@@ -16,13 +16,16 @@
 
     <article class="{{post_class}}">
         <header class="post-header">
-            <span class="post-meta"><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time> {{tags prefix="on "}}</span>
+            <span class="post-meta"><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time> </span>
             <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
 
         </header>
         <section class="post-excerpt">
             <p>{{excerpt}}&hellip;</p>
         </section>
+        <a class="button read-more right small" href="{{url}}">Read more</a>
+        <aside class="tags">{{tags prefix="Posted on "}}</aside>
+        <div class="clearfix"></div>
     </article>
 
     {{/foreach}}

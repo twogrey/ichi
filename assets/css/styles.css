@@ -363,13 +363,19 @@ button, .button, a, span, li, .head-area:after, hr {
 }
 /* line 314, ../scss/styles.scss */
 .main-column {
-  background: #f7f7f7;
+  background: #f3f3f3;
 }
 /* line 316, ../scss/styles.scss */
 .main-column main {
   max-width: 700px;
   margin: 0 auto;
-  padding: 50px 0;
+  padding: 1.5rem 0;
+}
+@media screen and (min-width: 64.063em) {
+  /* line 316, ../scss/styles.scss */
+  .main-column main {
+    padding: 4rem 0;
+  }
 }
 @media screen and (min-width: 64.063em) {
   /* line 314, ../scss/styles.scss */
@@ -378,32 +384,102 @@ button, .button, a, span, li, .head-area:after, hr {
     height: 100%;
   }
 }
-/* line 325, ../scss/styles.scss */
+/* line 328, ../scss/styles.scss */
 .main-column .pagination {
   position: relative;
   text-align: center;
 }
-/* line 328, ../scss/styles.scss */
+/* line 331, ../scss/styles.scss */
 .main-column .pagination a {
   position: absolute;
   font-size: 1.25rem;
 }
-/* line 331, ../scss/styles.scss */
+/* line 334, ../scss/styles.scss */
 .main-column .pagination a:first-child {
   left: 0;
 }
-/* line 334, ../scss/styles.scss */
+/* line 337, ../scss/styles.scss */
 .main-column .pagination a:last-child {
   right: 0;
 }
-/* line 337, ../scss/styles.scss */
+/* line 340, ../scss/styles.scss */
 .main-column .pagination a:hover {
   color: white;
   background: #e74c3c;
 }
-/* line 342, ../scss/styles.scss */
+/* line 345, ../scss/styles.scss */
 .main-column .pagination .page-number {
   font-size: 1.5rem;
   font-weight: 300;
   line-height: 48px;
+}
+
+/* POST */
+/* line 355, ../scss/styles.scss */
+.post {
+  background: #fff;
+  padding: 1.5em;
+  margin-bottom: 1.5rem;
+  border-bottom: #e74c3c 2px solid;
+  position: relative;
+}
+/* line 361, ../scss/styles.scss */
+.post p {
+  font-size: 0.9rem;
+}
+/* line 364, ../scss/styles.scss */
+.post .read-more {
+  margin-bottom: 0;
+  background: #e74c3c;
+  font-size: 0.9rem;
+  padding: 0.7rem 1.6rem;
+  border-radius: 3px;
+}
+/* line 370, ../scss/styles.scss */
+.post .read-more:hover {
+  background: #d62c1a;
+}
+/* line 374, ../scss/styles.scss */
+.post .tags {
+  float: left;
+  font-size: 0.8em;
+  margin-top: 20px;
+  color: #BEBEBE;
+  line-height: 1.6;
+}
+/* line 380, ../scss/styles.scss */
+.post .tags a {
+  text-transform: uppercase;
+  color: #ed7669;
+  text-decoration: underline;
+}
+/* line 384, ../scss/styles.scss */
+.post .tags a:hover {
+  color: #d62c1a;
+}
+/* line 390, ../scss/styles.scss */
+.post header h2 {
+  font-size: 2.2rem;
+  font-weight: 300;
+  color: #333333;
+  line-height: 1.2;
+  margin: 1rem 0 1.2rem;
+}
+/* line 396, ../scss/styles.scss */
+.post header h2 a {
+  color: inherit;
+}
+/* line 398, ../scss/styles.scss */
+.post header h2 a:hover {
+  color: #e74c3c;
+}
+/* line 403, ../scss/styles.scss */
+.post header .post-meta {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #D1D1D1;
+  color: white;
+  padding: 5px 10px;
+  font-size: 14px;
 }

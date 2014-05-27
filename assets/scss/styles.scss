@@ -312,11 +312,14 @@ button, .button, a, span, li, .head-area:after, hr {
 
 
 .main-column {
-    background: #f7f7f7;
+    background: #f3f3f3;
     main {
         max-width: 700px;
         margin: 0 auto;
-        padding: 50px 0;
+        padding: 1.5rem 0;
+        @media screen and (min-width: 64.063em) {
+            padding: 4rem 0;
+        }
     }
     @media screen and (min-width: 64.063em) {
         position: absolute;
@@ -343,6 +346,68 @@ button, .button, a, span, li, .head-area:after, hr {
             font-size: 1.5rem;
             font-weight: 300;
             line-height: 48px;
+        }
+    }
+}
+
+/* POST */
+
+.post {
+    background: #fff;
+    padding: 1.5em;
+    margin-bottom: 1.5rem;
+    border-bottom: $red 2px solid;
+    position: relative;
+    p {
+        font-size: 0.9rem;
+    }
+    .read-more {
+        margin-bottom: 0;
+        background: #e74c3c;
+        font-size: 0.9rem;
+        padding: 0.7rem 1.6rem;
+        border-radius: 3px;
+        &:hover {
+            background: darken($red,10%);
+        }
+    }
+    .tags {
+        float: left;
+        font-size: 0.8em;
+        margin-top: 20px;
+        color: #BEBEBE;
+        line-height: 1.6;
+        a {
+            text-transform: uppercase;
+            color: lighten($red,10%);
+            text-decoration: underline;
+            &:hover {
+                color: darken($red,10%);
+            }
+        }
+    }
+    header {
+        h2 {
+            font-size: 2.2rem;
+            font-weight: 300;
+            color: $black;
+            line-height: 1.2;
+            margin: 1rem 0 1.2rem;
+            a {
+                color: inherit;
+                &:hover {
+                    color: $red;
+                }
+            }
+        }
+        .post-meta {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: #D1D1D1;
+            color: white;
+            padding: 5px 10px;
+            font-size: 14px;
         }
     }
 }
