@@ -7,6 +7,7 @@ $black : #333;
 /* Generic */
 body {
     font-family: "open sans", "helvetica neue", helvetica, arial, sans-serif;
+    background: #f3f3f3;
     > .row {
         max-width: 100%;
     }
@@ -312,7 +313,6 @@ button, .button, a, span, li, .head-area:after, hr {
 
 
 .main-column {
-    background: #f3f3f3;
     main {
         max-width: 700px;
         margin: 0 auto;
@@ -328,9 +328,13 @@ button, .button, a, span, li, .head-area:after, hr {
     .pagination {
         position: relative;
         text-align: center;
+        background: $black;
+        border-bottom: 4px solid $red;
         a {
             position: absolute;
             font-size: 1.25rem;
+            color: white;
+            background: $black;
             &:first-child {
                 left: 0;
             }
@@ -338,14 +342,15 @@ button, .button, a, span, li, .head-area:after, hr {
                 right: 0;
             }
             &:hover {
-                color: white;
-                background: $red;
+                color: $red;
+                background: #fff;
             }
         }
         .page-number {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             font-weight: 300;
             line-height: 48px;
+            color: #fff;
         }
     }
 }
@@ -408,6 +413,22 @@ button, .button, a, span, li, .head-area:after, hr {
             color: white;
             padding: 5px 10px;
             font-size: 14px;
+        }
+    }
+}
+
+/* FOOTER */
+.site-footer {
+    section {
+        font-size: 0.8rem;
+        margin-top: 1rem;
+        text-align: center;
+        a {
+            color: $red;
+            &:hover {
+                text-decoration: underline;
+                color: darken($red, 10%);
+            }
         }
     }
 }
