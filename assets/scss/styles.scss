@@ -1,10 +1,7 @@
 @import "compass/css3";
-
 /* Variables */
-$red : #e74c3c;
-$black : #333;
-
-/* Generic */
+$red: #e74c3c;
+$black: #333; /* Generic */
 body {
     font-family: "open sans", "helvetica neue", helvetica, arial, sans-serif;
     background: #f3f3f3;
@@ -12,11 +9,9 @@ body {
         max-width: 100%;
     }
 }
-
 h1 {
     font-family: "source sans pro", "helvetica neue", helvetica, arial, sans-serif;
 }
-
 button, .button, a, span, li, .head-area:after, hr {
     @include transition(.3s all);
 }
@@ -65,10 +60,11 @@ button, .button, a, span, li, .head-area:after, hr {
     }
     .top-bar-section {
         .right {
-            li {/* 
-                @media screen and (min-width: 40.063em) {
+            li {
+                /* @media screen and (min-width:40.063em) {
                     border-left: 1px solid left;
-              } */
+                }
+                */
             }
         }
     }
@@ -82,7 +78,6 @@ button, .button, a, span, li, .head-area:after, hr {
 }
 
 /* Social network */
-
 .blog-network {
     padding-bottom: 15px;
     float: right;
@@ -139,7 +134,7 @@ button, .button, a, span, li, .head-area:after, hr {
         z-index: 1;
         background: rgba(0, 0, 0, 0.8);
     }
-    @media screen and (min-width: 64.063em) {
+    @media screen and (min-width:64.063em) {
         margin-top: 0;
         padding: 0 1.1rem;
         position: fixed;
@@ -148,11 +143,9 @@ button, .button, a, span, li, .head-area:after, hr {
         bottom: 0;
     }
 }
-
 .site-head {
-    @media screen and (min-width: 64.063em) {
+    @media screen and (min-width:64.063em) {
         padding-top: 30px;
-
     }
     text-align: center;
     z-index: 2;
@@ -179,7 +172,6 @@ button, .button, a, span, li, .head-area:after, hr {
         font-weight: 300;
         text-transform: uppercase;
         color: white;
-
     }
     hr {
         width: 100px;
@@ -206,8 +198,7 @@ button, .button, a, span, li, .head-area:after, hr {
     }
 }
 
-/** Crazy overlay menu **/
-
+/* * Crazy overlay menu * */
 /* Overlay style */
 .overlay {
     position: fixed;
@@ -244,7 +235,6 @@ button, .button, a, span, li, .head-area:after, hr {
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
 }
-
 .overlay ul {
     list-style: none;
     padding: 0;
@@ -253,7 +243,6 @@ button, .button, a, span, li, .head-area:after, hr {
     height: 100%;
     position: relative;
 }
-
 .overlay ul li {
     display: block;
     height: 20%;
@@ -262,7 +251,6 @@ button, .button, a, span, li, .head-area:after, hr {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
-
 .overlay ul li a {
     font-size: 54px;
     font-weight: 300;
@@ -271,9 +259,7 @@ button, .button, a, span, li, .head-area:after, hr {
     -webkit-transition: color 0.2s;
     transition: color 0.2s;
 }
-
-.overlay ul li a:hover,
-.overlay ul li a:focus {
+.overlay ul li a:hover, .overlay ul li a:focus {
     color: #f0f0f0;
 }
 
@@ -286,17 +272,15 @@ button, .button, a, span, li, .head-area:after, hr {
     -webkit-transition: -webkit-transform 0.2s, opacity 0.2s, visibility 0s 0.2s;
     transition: transform 0.2s, opacity 0.2s, visibility 0s 0.2s;
 }
-
 .overlay-scale.open {
     visibility: visible;
     opacity: 1;
     -webkit-transform: scale(1);
-    transform: scale(1);    
+    transform: scale(1);
     -webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
     transition: transform 0.4s, opacity 0.4s;
 }
-
-@media screen and (max-height: 30.5em) {
+@media screen and (max-height:30.5em) {
     .overlay nav {
         height: 70%;
         font-size: 34px;
@@ -305,23 +289,16 @@ button, .button, a, span, li, .head-area:after, hr {
         min-height: 34px;
     }
 }
-
-
-
-
-
-
-
 .main-column {
     main {
         max-width: 700px;
         margin: 0 auto;
         padding: 1.5rem 0;
-        @media screen and (min-width: 64.063em) {
+        @media screen and (min-width:64.063em) {
             padding: 4rem 0;
         }
     }
-    @media screen and (min-width: 64.063em) {
+    @media screen and (min-width:64.063em) {
         position: absolute;
         height: 100%;
     }
@@ -356,7 +333,6 @@ button, .button, a, span, li, .head-area:after, hr {
 }
 
 /* POST */
-
 .post {
     background: #fff;
     padding: 1.5em;
@@ -373,7 +349,7 @@ button, .button, a, span, li, .head-area:after, hr {
         padding: 0.7rem 1.6rem;
         border-radius: 3px;
         &:hover {
-            background: darken($red,10%);
+            background: darken($red, 10%);
         }
     }
     .tags {
@@ -384,10 +360,10 @@ button, .button, a, span, li, .head-area:after, hr {
         line-height: 1.6;
         a {
             text-transform: uppercase;
-            color: lighten($red,10%);
+            color: lighten($red, 10%);
             text-decoration: underline;
             &:hover {
-                color: darken($red,10%);
+                color: darken($red, 10%);
             }
         }
     }
@@ -413,6 +389,72 @@ button, .button, a, span, li, .head-area:after, hr {
             color: white;
             padding: 5px 10px;
             font-size: 14px;
+        }
+    }
+}
+.post-template {
+    .post {
+        .post-meta {
+            width: 100%;
+            background: lighten($black, 70%);
+            color: lighten($black, 40%);
+            font-size: 0.8rem;
+            line-height: 20px;
+            margin: 0.9rem 0;
+            span:first-of-type {
+                float: left;
+                margin-right: 10px;
+                time {
+                    color: $black;
+                }
+            }
+            span:last-of-type {
+                float: right;
+                a {
+                    color: $red;
+                    &:hover {
+                        text-decoration: underline;
+                        color: darken($red, 20%);
+                    }
+                }
+            }
+        }
+        pre {
+            margin: 1.6em 0;
+            box-sizing: border-box;
+            background: #f1f0ea;
+            border: 1px solid #dddbcc;
+            width: 100%;
+            padding: 10px;
+            font-family: Inconsolata, monospace;
+            font-size: 0.9em;
+            white-space: pre;
+            overflow: auto;
+            border-radius: 3px;
+            word-wrap: break-word;
+            code {
+                font-size: inherit;
+                white-space: -moz-pre-wrap;
+                white-space: pre-wrap;
+                background: transparent;
+                border: none;
+                padding: 0;
+                font-family: Inconsolata, monospace;
+                border-radius: 2px;
+                line-height: 1.5;
+            }
+        }
+        .share {
+            .fi-social-facebook { color: #3b5998 }
+            .fi-social-twitter { color: #00aced }
+            .fi-social-google-plus { color: #dd4b39 }
+            a {
+                margin-right: 10px;
+                font-size: 2.5rem;
+                &:hover {
+                    color: darken($red,10%);
+                }
+            }
         }
     }
 }
