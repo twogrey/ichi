@@ -458,23 +458,22 @@ button, .button, a, span, li, .head-area:after, hr {
 .post .tags a:hover {
   color: #d62c1a;
 }
-/* line 371, ../scss/styles.scss */
-.post header h2 {
-  font-size: 2.2rem;
+/* line 370, ../scss/styles.scss */
+.post .post-title {
   font-weight: 300;
   color: #333333;
   line-height: 1.2;
   margin: 1rem 0 1.2rem;
 }
-/* line 377, ../scss/styles.scss */
-.post header h2 a {
+/* line 375, ../scss/styles.scss */
+.post .post-title a {
   color: inherit;
 }
-/* line 379, ../scss/styles.scss */
-.post header h2 a:hover {
+/* line 377, ../scss/styles.scss */
+.post .post-title a:hover {
   color: #e74c3c;
 }
-/* line 384, ../scss/styles.scss */
+/* line 383, ../scss/styles.scss */
 .post header .post-meta {
   position: absolute;
   top: 0;
@@ -485,7 +484,7 @@ button, .button, a, span, li, .head-area:after, hr {
   font-size: 14px;
 }
 
-/* line 397, ../scss/styles.scss */
+/* line 396, ../scss/styles.scss */
 .post-template .post .post-meta {
   width: 100%;
   background: #e6e6e6;
@@ -494,29 +493,29 @@ button, .button, a, span, li, .head-area:after, hr {
   line-height: 20px;
   margin: 0.9rem 0;
 }
-/* line 404, ../scss/styles.scss */
+/* line 403, ../scss/styles.scss */
 .post-template .post .post-meta span:first-of-type {
   float: left;
   margin-right: 10px;
 }
-/* line 407, ../scss/styles.scss */
+/* line 406, ../scss/styles.scss */
 .post-template .post .post-meta span:first-of-type time {
   color: #333333;
 }
-/* line 411, ../scss/styles.scss */
+/* line 410, ../scss/styles.scss */
 .post-template .post .post-meta span:last-of-type {
   float: right;
 }
-/* line 413, ../scss/styles.scss */
+/* line 412, ../scss/styles.scss */
 .post-template .post .post-meta span:last-of-type a {
   color: #e74c3c;
 }
-/* line 415, ../scss/styles.scss */
+/* line 414, ../scss/styles.scss */
 .post-template .post .post-meta span:last-of-type a:hover {
   text-decoration: underline;
   color: #a82315;
 }
-/* line 422, ../scss/styles.scss */
+/* line 421, ../scss/styles.scss */
 .post-template .post pre {
   margin: 1.6em 0;
   box-sizing: border-box;
@@ -531,7 +530,7 @@ button, .button, a, span, li, .head-area:after, hr {
   border-radius: 3px;
   word-wrap: break-word;
 }
-/* line 435, ../scss/styles.scss */
+/* line 434, ../scss/styles.scss */
 .post-template .post pre code {
   font-size: inherit;
   white-space: -moz-pre-wrap;
@@ -543,40 +542,121 @@ button, .button, a, span, li, .head-area:after, hr {
   border-radius: 2px;
   line-height: 1.5;
 }
-/* line 448, ../scss/styles.scss */
+/* line 447, ../scss/styles.scss */
 .post-template .post .share .fi-social-facebook {
   color: #3b5998;
 }
-/* line 449, ../scss/styles.scss */
+/* line 450, ../scss/styles.scss */
 .post-template .post .share .fi-social-twitter {
   color: #00aced;
 }
-/* line 450, ../scss/styles.scss */
+/* line 453, ../scss/styles.scss */
 .post-template .post .share .fi-social-google-plus {
   color: #dd4b39;
 }
-/* line 451, ../scss/styles.scss */
+/* line 456, ../scss/styles.scss */
 .post-template .post .share a {
   margin-right: 10px;
   font-size: 2.5rem;
 }
-/* line 454, ../scss/styles.scss */
+/* line 459, ../scss/styles.scss */
 .post-template .post .share a:hover {
   color: #d62c1a;
 }
+/* line 464, ../scss/styles.scss */
+.post-template .post .author {
+  background: #e74c3c;
+  margin-top: 20px;
+  color: white;
+  width: 100%;
+  border-radius: 8px;
+  border-bottom: 2px solid #bf2718;
+  text-align: center;
+  line-height: 2.3;
+}
+/* line 474, ../scss/styles.scss */
+.post-template .post .author header span {
+  color: #BD3729;
+  font-size: 1.4rem;
+  font-weight: 900;
+  font-family: "source sans pro", arial, sans-serif;
+  text-transform: uppercase;
+}
+/* line 482, ../scss/styles.scss */
+.post-template .post .author section {
+  background: #eeeeee;
+  position: relative;
+  overflow: hidden;
+  height: 117px;
+  padding: 10px;
+}
+/* line 488, ../scss/styles.scss */
+.post-template .post .author section h4 {
+  margin: 0;
+  text-align: left;
+  padding-right: 100px;
+  color: #333333;
+  font-weight: 700;
+  float: left;
+  clear: both;
+}
+/* line 497, ../scss/styles.scss */
+.post-template .post .author section span {
+  text-align: left;
+  padding-right: 100px;
+  color: #4d4d4d;
+  float: left;
+  clear: both;
+  font-size: 0.8rem;
+  line-height: 1.2;
+  padding: 10px 0;
+}
+/* line 507, ../scss/styles.scss */
+.post-template .post .author section img {
+  position: absolute;
+  top: 0;
+  right: -10px;
+  width: 120px;
+  height: auto;
+}
+/* line 514, ../scss/styles.scss */
+.post-template .post .author section a {
+  text-align: left;
+  padding-right: 100px;
+  color: #e74c3c;
+  float: left;
+  clear: both;
+  font-size: 0.8rem;
+  line-height: 1.2;
+}
+/* line 522, ../scss/styles.scss */
+.post-template .post .author section a:hover {
+  color: #a82315;
+  text-decoration: underline;
+}
+/* line 528, ../scss/styles.scss */
+.post-template .post .author footer {
+  padding: 10px;
+}
+/* line 530, ../scss/styles.scss */
+.post-template .post .author footer p {
+  margin: 0;
+  text-align: left;
+  font-size: 0.8rem;
+}
 
 /* FOOTER */
-/* line 464, ../scss/styles.scss */
+/* line 542, ../scss/styles.scss */
 .site-footer section {
   font-size: 0.8rem;
   margin-top: 1rem;
   text-align: center;
 }
-/* line 468, ../scss/styles.scss */
+/* line 546, ../scss/styles.scss */
 .site-footer section a {
   color: #e74c3c;
 }
-/* line 470, ../scss/styles.scss */
+/* line 548, ../scss/styles.scss */
 .site-footer section a:hover {
   text-decoration: underline;
   color: #d62c1a;
