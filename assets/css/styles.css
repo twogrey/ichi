@@ -439,8 +439,9 @@ button, .button, a, span, li, .head-area:after, hr {
 /* line 351, ../scss/styles.scss */
 .post .read-more:hover {
   background: #d62c1a;
+  border-radius: 8px;
 }
-/* line 355, ../scss/styles.scss */
+/* line 356, ../scss/styles.scss */
 .post .tags {
   float: left;
   font-size: 0.8em;
@@ -448,32 +449,32 @@ button, .button, a, span, li, .head-area:after, hr {
   color: #BEBEBE;
   line-height: 1.6;
 }
-/* line 361, ../scss/styles.scss */
+/* line 362, ../scss/styles.scss */
 .post .tags a {
   text-transform: uppercase;
   color: #ed7669;
   text-decoration: underline;
 }
-/* line 365, ../scss/styles.scss */
+/* line 366, ../scss/styles.scss */
 .post .tags a:hover {
   color: #d62c1a;
 }
-/* line 370, ../scss/styles.scss */
+/* line 371, ../scss/styles.scss */
 .post .post-title {
   font-weight: 300;
   color: #333333;
   line-height: 1.2;
   margin: 1rem 0 1.2rem;
 }
-/* line 375, ../scss/styles.scss */
+/* line 376, ../scss/styles.scss */
 .post .post-title a {
   color: inherit;
 }
-/* line 377, ../scss/styles.scss */
+/* line 378, ../scss/styles.scss */
 .post .post-title a:hover {
   color: #e74c3c;
 }
-/* line 383, ../scss/styles.scss */
+/* line 384, ../scss/styles.scss */
 .post header .post-meta {
   position: absolute;
   top: 0;
@@ -484,36 +485,35 @@ button, .button, a, span, li, .head-area:after, hr {
   font-size: 14px;
 }
 
-/* line 396, ../scss/styles.scss */
+/* line 397, ../scss/styles.scss */
 .post-template .post .post-meta {
   width: 100%;
-  background: #e6e6e6;
-  color: #999999;
+  background: #e74c3c;
+  color: #4d100a;
   font-size: 0.8rem;
   line-height: 20px;
-  margin: 0.9rem 0;
+  margin: 0 0 0.9rem 0;
 }
-/* line 403, ../scss/styles.scss */
+/* line 404, ../scss/styles.scss */
 .post-template .post .post-meta span:first-of-type {
   float: left;
   margin-right: 10px;
 }
-/* line 406, ../scss/styles.scss */
+/* line 407, ../scss/styles.scss */
 .post-template .post .post-meta span:first-of-type time {
-  color: #333333;
+  color: white;
 }
-/* line 410, ../scss/styles.scss */
+/* line 411, ../scss/styles.scss */
 .post-template .post .post-meta span:last-of-type {
   float: right;
 }
-/* line 412, ../scss/styles.scss */
+/* line 413, ../scss/styles.scss */
 .post-template .post .post-meta span:last-of-type a {
-  color: #e74c3c;
+  color: white;
 }
-/* line 414, ../scss/styles.scss */
+/* line 415, ../scss/styles.scss */
 .post-template .post .post-meta span:last-of-type a:hover {
   text-decoration: underline;
-  color: #a82315;
 }
 /* line 421, ../scss/styles.scss */
 .post-template .post pre {

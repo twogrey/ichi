@@ -35,7 +35,7 @@
     <li class="name">
       
     </li>
-    <li class="home"><a class="fi-home" href="{{@blog-url}}"></a></li>
+    <li class="home"><a class="fi-home" href="{{@blog.url}}"></a></li>
      <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
     <li class="toggle-topbar"><a href="#" id="trigger-overlay" class="fi-list"></a></li>
   </ul>
@@ -108,6 +108,7 @@
     {{ghost_foot}}
 
     {{! The main JavaScript file for Ichi }}
+    <script type="text/javascript" src="{{asset "js/vendor/jquery.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
 
@@ -115,6 +116,7 @@
     <script type="text/javascript" src="{{asset "js/overlay/snap.svg-min.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/overlay/classie.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/overlay/demo1.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/vendor/smoothscroll.js"}}"></script>
 
     <script>
       $(document).foundation();
