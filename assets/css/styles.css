@@ -178,12 +178,6 @@ button, .button, a, span, li, .head-area:after, hr {
   z-index: 2;
   position: relative;
 }
-@media screen and (min-width: 64.063em) {
-  /* line 146, ../scss/styles.scss */
-  .site-head {
-    padding-top: 30px;
-  }
-}
 /* line 153, ../scss/styles.scss */
 .site-head .blog-description {
   margin: 1.3rem 0 1rem;
@@ -233,28 +227,35 @@ button, .button, a, span, li, .head-area:after, hr {
   float: left;
   clear: both;
   width: 100%;
+  margin-bottom: 35px;
 }
-/* line 184, ../scss/styles.scss */
+/* line 185, ../scss/styles.scss */
 .site-head .blog-menu li {
   font-size: 1rem;
+  width: 33%;
+  float: left;
 }
-/* line 186, ../scss/styles.scss */
+/* line 189, ../scss/styles.scss */
+.site-head .blog-menu li:nth-child(2) {
+  margin: 0 0.5%;
+}
+/* line 195, ../scss/styles.scss */
 .site-head .blog-menu li a {
   padding: 5px 0;
   background: #333333;
   color: white;
   text-transform: uppercase;
+  font-size: 2rem;
 }
-/* line 191, ../scss/styles.scss */
+/* line 201, ../scss/styles.scss */
 .site-head .blog-menu li a:hover {
   color: white;
   background: #e74c3c;
-  border-radius: 10px;
 }
 
 /* * Crazy overlay menu * */
 /* Overlay style */
-/* line 203, ../scss/styles.scss */
+/* line 212, ../scss/styles.scss */
 .overlay {
   position: fixed;
   width: 100%;
@@ -266,7 +267,7 @@ button, .button, a, span, li, .head-area:after, hr {
 }
 
 /* Overlay closing cross */
-/* line 214, ../scss/styles.scss */
+/* line 223, ../scss/styles.scss */
 .overlay .overlay-close {
   width: 80px;
   height: 80px;
@@ -283,7 +284,7 @@ button, .button, a, span, li, .head-area:after, hr {
 }
 
 /* Menu style */
-/* line 230, ../scss/styles.scss */
+/* line 239, ../scss/styles.scss */
 .overlay nav {
   text-align: center;
   position: relative;
@@ -293,7 +294,7 @@ button, .button, a, span, li, .head-area:after, hr {
   transform: translateY(-50%);
 }
 
-/* line 238, ../scss/styles.scss */
+/* line 247, ../scss/styles.scss */
 .overlay ul {
   list-style: none;
   padding: 0;
@@ -303,7 +304,7 @@ button, .button, a, span, li, .head-area:after, hr {
   position: relative;
 }
 
-/* line 246, ../scss/styles.scss */
+/* line 255, ../scss/styles.scss */
 .overlay ul li {
   display: block;
   height: 20%;
@@ -313,7 +314,7 @@ button, .button, a, span, li, .head-area:after, hr {
   backface-visibility: hidden;
 }
 
-/* line 254, ../scss/styles.scss */
+/* line 263, ../scss/styles.scss */
 .overlay ul li a {
   font-size: 54px;
   font-weight: 300;
@@ -323,13 +324,13 @@ button, .button, a, span, li, .head-area:after, hr {
   transition: color 0.2s;
 }
 
-/* line 262, ../scss/styles.scss */
+/* line 271, ../scss/styles.scss */
 .overlay ul li a:hover, .overlay ul li a:focus {
   color: #f0f0f0;
 }
 
 /* Effects */
-/* line 267, ../scss/styles.scss */
+/* line 276, ../scss/styles.scss */
 .overlay-scale {
   visibility: hidden;
   opacity: 0;
@@ -339,7 +340,7 @@ button, .button, a, span, li, .head-area:after, hr {
   transition: transform 0.2s, opacity 0.2s, visibility 0s 0.2s;
 }
 
-/* line 275, ../scss/styles.scss */
+/* line 284, ../scss/styles.scss */
 .overlay-scale.open {
   visibility: visible;
   opacity: 1;
@@ -350,64 +351,64 @@ button, .button, a, span, li, .head-area:after, hr {
 }
 
 @media screen and (max-height: 30.5em) {
-  /* line 284, ../scss/styles.scss */
+  /* line 293, ../scss/styles.scss */
   .overlay nav {
     height: 70%;
     font-size: 34px;
   }
 
-  /* line 288, ../scss/styles.scss */
+  /* line 297, ../scss/styles.scss */
   .overlay ul li {
     min-height: 34px;
   }
 }
-/* line 293, ../scss/styles.scss */
+/* line 302, ../scss/styles.scss */
 .main-column main {
   max-width: 700px;
   margin: 0 auto;
   padding: 1.5rem 0;
 }
 @media screen and (min-width: 64.063em) {
-  /* line 293, ../scss/styles.scss */
+  /* line 302, ../scss/styles.scss */
   .main-column main {
     padding: 4rem 0;
   }
 }
 @media screen and (min-width: 64.063em) {
-  /* line 292, ../scss/styles.scss */
+  /* line 301, ../scss/styles.scss */
   .main-column {
     position: absolute;
     height: 100%;
   }
 }
-/* line 305, ../scss/styles.scss */
+/* line 314, ../scss/styles.scss */
 .main-column .pagination {
   position: relative;
   text-align: center;
   background: #333333;
   border-bottom: 4px solid #e74c3c;
 }
-/* line 310, ../scss/styles.scss */
+/* line 319, ../scss/styles.scss */
 .main-column .pagination a {
   position: absolute;
   font-size: 1.25rem;
   color: white;
   background: #333333;
 }
-/* line 315, ../scss/styles.scss */
+/* line 324, ../scss/styles.scss */
 .main-column .pagination a:first-child {
   left: 0;
 }
-/* line 318, ../scss/styles.scss */
+/* line 327, ../scss/styles.scss */
 .main-column .pagination a:last-child {
   right: 0;
 }
-/* line 321, ../scss/styles.scss */
+/* line 330, ../scss/styles.scss */
 .main-column .pagination a:hover {
   color: #e74c3c;
   background: #fff;
 }
-/* line 326, ../scss/styles.scss */
+/* line 335, ../scss/styles.scss */
 .main-column .pagination .page-number {
   font-size: 1.2rem;
   font-weight: 300;
@@ -416,7 +417,7 @@ button, .button, a, span, li, .head-area:after, hr {
 }
 
 /* POST */
-/* line 336, ../scss/styles.scss */
+/* line 345, ../scss/styles.scss */
 .post {
   background: #fff;
   padding: 1.5em;
@@ -424,11 +425,11 @@ button, .button, a, span, li, .head-area:after, hr {
   border-bottom: #e74c3c 2px solid;
   position: relative;
 }
-/* line 342, ../scss/styles.scss */
+/* line 351, ../scss/styles.scss */
 .post p {
   font-size: 0.9rem;
 }
-/* line 345, ../scss/styles.scss */
+/* line 354, ../scss/styles.scss */
 .post .read-more {
   margin-bottom: 0;
   background: #e74c3c;
@@ -436,12 +437,12 @@ button, .button, a, span, li, .head-area:after, hr {
   padding: 0.7rem 1.6rem;
   border-radius: 3px;
 }
-/* line 351, ../scss/styles.scss */
+/* line 360, ../scss/styles.scss */
 .post .read-more:hover {
   background: #d62c1a;
   border-radius: 8px;
 }
-/* line 356, ../scss/styles.scss */
+/* line 365, ../scss/styles.scss */
 .post .tags {
   float: left;
   font-size: 0.8em;
@@ -449,32 +450,32 @@ button, .button, a, span, li, .head-area:after, hr {
   color: #BEBEBE;
   line-height: 1.6;
 }
-/* line 362, ../scss/styles.scss */
+/* line 371, ../scss/styles.scss */
 .post .tags a {
   text-transform: uppercase;
   color: #ed7669;
   text-decoration: underline;
 }
-/* line 366, ../scss/styles.scss */
+/* line 375, ../scss/styles.scss */
 .post .tags a:hover {
   color: #d62c1a;
 }
-/* line 371, ../scss/styles.scss */
+/* line 380, ../scss/styles.scss */
 .post .post-title {
   font-weight: 300;
   color: #333333;
   line-height: 1.2;
   margin: 1rem 0 1.2rem;
 }
-/* line 376, ../scss/styles.scss */
+/* line 385, ../scss/styles.scss */
 .post .post-title a {
   color: inherit;
 }
-/* line 378, ../scss/styles.scss */
+/* line 387, ../scss/styles.scss */
 .post .post-title a:hover {
   color: #e74c3c;
 }
-/* line 384, ../scss/styles.scss */
+/* line 393, ../scss/styles.scss */
 .post header .post-meta {
   position: absolute;
   top: 0;
@@ -485,7 +486,7 @@ button, .button, a, span, li, .head-area:after, hr {
   font-size: 14px;
 }
 
-/* line 397, ../scss/styles.scss */
+/* line 406, ../scss/styles.scss */
 .post-template .post .post-meta {
   width: 100%;
   background: #e74c3c;
@@ -494,28 +495,28 @@ button, .button, a, span, li, .head-area:after, hr {
   line-height: 20px;
   margin: 0 0 0.9rem 0;
 }
-/* line 404, ../scss/styles.scss */
+/* line 413, ../scss/styles.scss */
 .post-template .post .post-meta span:first-of-type {
   float: left;
   margin-right: 10px;
 }
-/* line 407, ../scss/styles.scss */
+/* line 416, ../scss/styles.scss */
 .post-template .post .post-meta span:first-of-type time {
   color: white;
 }
-/* line 411, ../scss/styles.scss */
+/* line 420, ../scss/styles.scss */
 .post-template .post .post-meta span:last-of-type {
   float: right;
 }
-/* line 413, ../scss/styles.scss */
+/* line 422, ../scss/styles.scss */
 .post-template .post .post-meta span:last-of-type a {
   color: white;
 }
-/* line 415, ../scss/styles.scss */
+/* line 424, ../scss/styles.scss */
 .post-template .post .post-meta span:last-of-type a:hover {
   text-decoration: underline;
 }
-/* line 421, ../scss/styles.scss */
+/* line 430, ../scss/styles.scss */
 .post-template .post pre {
   margin: 1.6em 0;
   box-sizing: border-box;
@@ -530,7 +531,7 @@ button, .button, a, span, li, .head-area:after, hr {
   border-radius: 3px;
   word-wrap: break-word;
 }
-/* line 434, ../scss/styles.scss */
+/* line 443, ../scss/styles.scss */
 .post-template .post pre code {
   font-size: inherit;
   white-space: -moz-pre-wrap;
@@ -542,28 +543,28 @@ button, .button, a, span, li, .head-area:after, hr {
   border-radius: 2px;
   line-height: 1.5;
 }
-/* line 447, ../scss/styles.scss */
+/* line 456, ../scss/styles.scss */
 .post-template .post .share .fi-social-facebook {
   color: #3b5998;
 }
-/* line 450, ../scss/styles.scss */
+/* line 459, ../scss/styles.scss */
 .post-template .post .share .fi-social-twitter {
   color: #00aced;
 }
-/* line 453, ../scss/styles.scss */
+/* line 462, ../scss/styles.scss */
 .post-template .post .share .fi-social-google-plus {
   color: #dd4b39;
 }
-/* line 456, ../scss/styles.scss */
+/* line 465, ../scss/styles.scss */
 .post-template .post .share a {
   margin-right: 10px;
   font-size: 2.5rem;
 }
-/* line 459, ../scss/styles.scss */
+/* line 468, ../scss/styles.scss */
 .post-template .post .share a:hover {
   color: #d62c1a;
 }
-/* line 464, ../scss/styles.scss */
+/* line 473, ../scss/styles.scss */
 .post-template .post .author {
   background: #e74c3c;
   margin-top: 20px;
@@ -574,7 +575,7 @@ button, .button, a, span, li, .head-area:after, hr {
   text-align: center;
   line-height: 2.3;
 }
-/* line 474, ../scss/styles.scss */
+/* line 483, ../scss/styles.scss */
 .post-template .post .author header span {
   color: #BD3729;
   font-size: 1.4rem;
@@ -582,15 +583,14 @@ button, .button, a, span, li, .head-area:after, hr {
   font-family: "source sans pro", arial, sans-serif;
   text-transform: uppercase;
 }
-/* line 482, ../scss/styles.scss */
+/* line 491, ../scss/styles.scss */
 .post-template .post .author section {
   background: #eeeeee;
   position: relative;
   overflow: hidden;
-  height: 117px;
   padding: 10px;
 }
-/* line 488, ../scss/styles.scss */
+/* line 496, ../scss/styles.scss */
 .post-template .post .author section h4 {
   margin: 0;
   text-align: left;
@@ -600,26 +600,26 @@ button, .button, a, span, li, .head-area:after, hr {
   float: left;
   clear: both;
 }
-/* line 497, ../scss/styles.scss */
+/* line 505, ../scss/styles.scss */
 .post-template .post .author section span {
   text-align: left;
-  padding-right: 100px;
   color: #4d4d4d;
   float: left;
   clear: both;
   font-size: 0.8rem;
   line-height: 1.2;
-  padding: 10px 0;
-}
-/* line 507, ../scss/styles.scss */
-.post-template .post .author section img {
-  position: absolute;
-  top: 0;
-  right: -10px;
-  width: 120px;
-  height: auto;
+  padding: 10px 100px 10px 0;
 }
 /* line 514, ../scss/styles.scss */
+.post-template .post .author section img {
+  position: absolute;
+  right: -10px;
+  max-width: 120px;
+  height: 100%;
+  max-height: 120px;
+  bottom: 0;
+}
+/* line 522, ../scss/styles.scss */
 .post-template .post .author section a {
   text-align: left;
   padding-right: 100px;
@@ -629,16 +629,16 @@ button, .button, a, span, li, .head-area:after, hr {
   font-size: 0.8rem;
   line-height: 1.2;
 }
-/* line 522, ../scss/styles.scss */
+/* line 530, ../scss/styles.scss */
 .post-template .post .author section a:hover {
   color: #a82315;
   text-decoration: underline;
 }
-/* line 528, ../scss/styles.scss */
+/* line 536, ../scss/styles.scss */
 .post-template .post .author footer {
   padding: 10px;
 }
-/* line 530, ../scss/styles.scss */
+/* line 538, ../scss/styles.scss */
 .post-template .post .author footer p {
   margin: 0;
   text-align: left;
@@ -646,17 +646,17 @@ button, .button, a, span, li, .head-area:after, hr {
 }
 
 /* FOOTER */
-/* line 542, ../scss/styles.scss */
+/* line 550, ../scss/styles.scss */
 .site-footer section {
   font-size: 0.8rem;
   margin-top: 1rem;
   text-align: center;
 }
-/* line 546, ../scss/styles.scss */
+/* line 554, ../scss/styles.scss */
 .site-footer section a {
   color: #e74c3c;
 }
-/* line 548, ../scss/styles.scss */
+/* line 556, ../scss/styles.scss */
 .site-footer section a:hover {
   text-decoration: underline;
   color: #d62c1a;

@@ -145,7 +145,7 @@ button, .button, a, span, li, .head-area:after, hr {
 }
 .site-head {
     @media screen and (min-width:64.063em) {
-        padding-top: 30px;
+        
     }
     text-align: center;
     z-index: 2;
@@ -181,17 +181,26 @@ button, .button, a, span, li, .head-area:after, hr {
         float: left;
         clear: both;
         width: 100%;
+        margin-bottom: 35px;
         li {
             font-size: 1rem;
+            width: 33%;
+            float: left;
+            &:nth-child(2) {
+                margin: 0 0.5%;
+            }
+            &:hover {
+
+            }
             a {
                 padding: 5px 0;
                 background: $black;
                 color: white;
                 text-transform: uppercase;
+                font-size: 2rem;
                 &:hover {
                     color: white;
                     background: $red;
-                    border-radius: 10px;
                 }
             }
         }
@@ -482,8 +491,7 @@ button, .button, a, span, li, .head-area:after, hr {
             section {
                 background: rgb(238, 238, 238);
                 position: relative;
-                overflow: hidden;
-                height: 117px;
+                overflow: hidden; 
                 padding: 10px;
                 h4 {
                     margin: 0;
@@ -495,21 +503,21 @@ button, .button, a, span, li, .head-area:after, hr {
                     clear: both;
                 }
                 span {
-                    text-align: left;
-                    padding-right: 100px;
+                    text-align: left; 
                     color: lighten($black, 10%);
                     float: left;
                     clear: both;
                     font-size: 0.8rem;
                     line-height: 1.2;
-                    padding: 10px 0;
+                    padding: 10px 100px 10px 0;
                 }
                 img {
                     position: absolute;
-                    top: 0;
                     right: -10px;
-                    width: 120px;
-                    height: auto;
+                    max-width: 120px;
+                    height: 100%;
+                    max-height: 120px;
+                    bottom: 0;
                 }
                 a {
                     text-align: left;
