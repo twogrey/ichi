@@ -300,7 +300,7 @@ button, .button, a, span, li, .head-area:after, hr {
 }
 .main-column {
     main {
-        max-width: 700px;
+        max-width: 60rem;
         margin: 0 auto;
         padding: 1.5rem 0;
         @media screen and (min-width:64.063em) {
@@ -453,6 +453,11 @@ button, .button, a, span, li, .head-area:after, hr {
             }
         }
         .share {
+            @media screen and (min-width:64.063em) {
+                width: 50%;
+                float: left;
+                margin-top: 0;
+            }
             .fi-social-facebook {
                 color: #3b5998
             }
@@ -479,6 +484,11 @@ button, .button, a, span, li, .head-area:after, hr {
             border-bottom: 2px solid darken($red, 15%);
             text-align: center;
             line-height: 2.3;
+            @media screen and (min-width:64.063em) {
+                width: 50%;
+                float: right;
+                margin-top: 0;
+            }
             header {
                 span {
                     color: #BD3729;
