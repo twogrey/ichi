@@ -586,6 +586,55 @@ a {
     }
 }
 
+/* FEATURED */
+.post.featured {
+    padding: 0;
+    > p {
+        margin: 0;
+        position: relative;
+        img {
+            @include box-shadow(0 2px 5px 0 rgba(0, 0, 0, 0.16));
+        }
+        &:before {
+            content: "\f1ee";
+            font-family: "foundation-icons";
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            display: inline-block;
+            text-decoration: inherit;
+            background: white;
+            color: #e74c3c;
+            position: absolute;
+            bottom: -5%;
+            right: 7%;
+            font-size: 2.5rem;
+            text-align: center;
+            border-radius: 100px;
+            line-height: 59px;
+            border: 1px solid #333;
+            padding: 0 13px;
+        }
+    }
+    > div {
+        padding: 2.5em;
+        .post-header { 
+            .post-meta {
+                background: $red;
+            }
+            h2 {
+                margin-top: 0;
+            }
+        }
+        .read-more {
+            font-size: 1.2rem;
+        }
+    }
+}
+
 /* FOOTER */
 .site-footer {
     section {
