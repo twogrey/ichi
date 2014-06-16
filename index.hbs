@@ -21,10 +21,14 @@
 
         </header>
         <section class="post-excerpt">
-            <p>{{excerpt}}&hellip;</p>
+            <p>{{excerpt characters="400"}}&hellip;</p>
         </section>
         <a class="button read-more right small" href="{{url}}">Read more</a>
-        <aside class="tags">{{tags prefix="Posted on "}}</aside>
+        {{#if tags}}
+        <aside class="tags fi-pricetag-multiple">{{tags prefix="Posted on "}}</aside>
+        {{else}}
+        <aside class="tags fi-pricetag-multiple">No tag</aside>
+        {{/if}}
         <div class="clearfix"></div>
     </article>
 

@@ -15,6 +15,12 @@ h1 {
 button, .button, a, span, li, .head-area:after, hr {
     @include transition(.3s all);
 }
+a {
+    color: $red;
+    &:hover {
+        color: darken($red, 20%);
+    }
+}
 
 /* Foundation row */
 .row {
@@ -145,7 +151,6 @@ button, .button, a, span, li, .head-area:after, hr {
 }
 .site-head {
     @media screen and (min-width:64.063em) {
-        
     }
     text-align: center;
     z-index: 2;
@@ -190,7 +195,6 @@ button, .button, a, span, li, .head-area:after, hr {
                 margin: 0 0.5%;
             }
             &:hover {
-
             }
             a {
                 padding: 5px 0;
@@ -255,7 +259,7 @@ button, .button, a, span, li, .head-area:after, hr {
 .overlay ul li {
     display: block;
     height: 20%;
-    height: calc(100% / 5);
+    height: 20%;
     min-height: 54px;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -300,7 +304,7 @@ button, .button, a, span, li, .head-area:after, hr {
 }
 .main-column {
     main {
-        max-width: 60rem;
+        max-width: 800px;
         margin: 0 auto;
         padding: 1.5rem 0;
         @media screen and (min-width:64.063em) {
@@ -348,32 +352,53 @@ button, .button, a, span, li, .head-area:after, hr {
     margin-bottom: 1.5rem;
     border-bottom: $red 2px solid;
     position: relative;
+    @include box-shadow(0 0 25px 0 rgba(0, 0, 0, 0.05));
+    @media screen and (min-width:64.063em) {
+        padding: 2.5em;
+        margin-bottom: 3rem;
+    }
     p {
         font-size: 0.9rem;
+        line-height: 2;
     }
     .read-more {
         margin-bottom: 0;
         background: #e74c3c;
-        font-size: 0.9rem;
         padding: 0.7rem 1.6rem;
         border-radius: 3px;
+        width: 100%;
+        font-weight: bold;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        @media screen and (min-width:40.063em) {
+            margin-left: 15px;
+            width: auto;
+        }
         &:hover {
             background: darken($red, 10%);
             border-radius: 8px;
         }
     }
     .tags {
+        &:before {
+            font-size: 1.7rem;
+            padding-right: 8px;
+            vertical-align: middle;
+        }
         float: left;
         font-size: 0.8em;
-        margin-top: 20px;
+        margin: 10px 0;
         color: #BEBEBE;
         line-height: 1.6;
+        @media screen and (max-width:40.063em) {
+            line-height: 27px;
+        }
         a {
             text-transform: uppercase;
-            color: lighten($red, 10%);
-            text-decoration: underline;
+            color: $red;
             &:hover {
-                color: darken($red, 10%);
+                color: darken($red, 20%);
+                border-bottom: 1px solid darken($red, 20%);
             }
         }
     }
@@ -403,6 +428,9 @@ button, .button, a, span, li, .head-area:after, hr {
 }
 .post-template {
     .post {
+        .post-title {
+            margin-top: 0;
+        }
         .post-meta {
             width: 100%;
             background: $red;
@@ -410,7 +438,9 @@ button, .button, a, span, li, .head-area:after, hr {
             font-size: 0.8rem;
             line-height: 20px;
             margin: 0 0 0.9rem 0;
+            white-space: normal;
             span:first-of-type {
+                text-align: left;
                 float: left;
                 margin-right: 10px;
                 time {
@@ -418,6 +448,7 @@ button, .button, a, span, li, .head-area:after, hr {
                 }
             }
             span:last-of-type {
+                text-align: right;
                 float: right;
                 a {
                     color: white;
@@ -483,7 +514,7 @@ button, .button, a, span, li, .head-area:after, hr {
             border-radius: 8px;
             border-bottom: 2px solid darken($red, 15%);
             text-align: center;
-            line-height: 2.3;  
+            line-height: 2.3;
             @media screen and (min-width:64.063em) {
                 width: 50%;
                 float: right;
@@ -501,7 +532,7 @@ button, .button, a, span, li, .head-area:after, hr {
             section {
                 background: rgb(238, 238, 238);
                 position: relative;
-                overflow: hidden; 
+                overflow: hidden;
                 padding: 10px;
                 h4 {
                     margin: 0;
@@ -513,7 +544,7 @@ button, .button, a, span, li, .head-area:after, hr {
                     clear: both;
                 }
                 span {
-                    text-align: left; 
+                    text-align: left;
                     color: lighten($black, 10%);
                     float: left;
                     clear: both;
@@ -538,7 +569,7 @@ button, .button, a, span, li, .head-area:after, hr {
                     font-size: 0.8rem;
                     line-height: 1.2;
                     &:hover {
-                        color: darken($red,20%);
+                        color: darken($red, 20%);
                         text-decoration: underline;
                     }
                 }
@@ -561,6 +592,10 @@ button, .button, a, span, li, .head-area:after, hr {
         font-size: 0.8rem;
         margin-top: 1rem;
         text-align: center;
+        @media screen and (min-width:64.063em) {
+            width: 33%;
+            float: left;
+        }
         a {
             color: $red;
             &:hover {
@@ -568,5 +603,13 @@ button, .button, a, span, li, .head-area:after, hr {
                 color: darken($red, 10%);
             }
         }
+    }
+}
+
+/* DISQUS */
+.title-disqus {
+    margin: 20px 0;
+    span:before {
+        padding-right: 10px;
     }
 }
