@@ -21,6 +21,9 @@ a {
         color: darken($red, 20%);
     }
 }
+#outdated {
+    display: none;
+}
 
 /* Foundation row */
 .row {
@@ -173,10 +176,11 @@ a {
         }
     }
     .blog-title {
-        margin-bottom: 1rem;
+        margin: 0.5rem 0 1rem;
         font-weight: 300;
         text-transform: uppercase;
         color: white;
+        line-height: 1.2;
     }
     hr {
         width: 100px;
@@ -429,7 +433,7 @@ a {
         }
     }
     .post-title {
-        font-weight: 300;
+        font-weight: 400;
         color: $black;
         line-height: 1.2;
         margin: 1rem 0 1.2rem;
