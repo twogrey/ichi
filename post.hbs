@@ -12,10 +12,15 @@
 
             <h1 class="post-title">{{{title}}}</h1>
 
-            <span class="post-meta label radius"><span>Posted : <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time></span> <span>{{tags prefix="On " separator=", "}}</span></span>
+            <span class="post-meta label"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time></span>
 
             <section class="post-content">
                 {{content}}
+                        {{#if tags}}
+                        <aside class="tags fi-pricetag-multiple">{{tags prefix="Posted on "}}</aside>
+                        {{else}}
+                        <aside class="tags fi-pricetag-multiple">No tag</aside>
+                        {{/if}}
             </section>
             <hr>
             <footer class="post-footer">
