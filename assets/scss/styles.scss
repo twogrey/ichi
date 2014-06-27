@@ -12,7 +12,7 @@ body {
 h1 {
     font-family: "source sans pro", "helvetica neue", helvetica, arial, sans-serif;
 }
-button, .button, a, span, li, .head-area:after, hr, img, .read-more:before, main, .post {
+button, .button, a, span, li, .head-area:after, hr, img, .read-more:before, main, .post, .head-area {
     @include transition(.3s all);
 }
 a {
@@ -124,11 +124,21 @@ a {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    background-color: $color;
+    &:not(.bgimage) {
+        &:hover {
+            background: darken($color, 40%);
+        }
+        &:after {
+            display: none;
+            background: none;
+        }
+    }
     hr {
         border-color: $black;
     }
     &:hover {
-        &:after {
+        &.bgimage:after {
             background: rgba(51, 51, 51, 0.65);
         }
         hr {
@@ -321,6 +331,10 @@ a {
         max-width: 800px;
         margin: 0 auto;
         padding: 1.5rem 0;
+        @media screen and (max-width:64.063em) {
+            max-width: none;
+            width: 100%;
+        }
         @media screen and (min-width:64.063em) {
             padding: 1.5rem 0;
         }
@@ -468,7 +482,7 @@ a {
             position: absolute;
             top: 0;
             left: 0;
-            background: #D1D1D1;
+            background: #C7C7C7;
             color: white;
             padding: 5px 10px;
             font-size: 14px;
@@ -483,10 +497,10 @@ a {
             color: white;
             margin: -1.5rem -1.5rem 0;
             padding: 1.5rem;
-            @media screen and (min-width: 64.063em) {
+            @media screen and (min-width:64.063em) {
                 margin: -2.5rem -2.5rem 0;
             }
-            @media screen and (min-width: 100em) {
+            @media screen and (min-width:100em) {
                 margin: -2.5rem -3.5rem 0;
             }
         }
@@ -497,10 +511,10 @@ a {
             line-height: 20px;
             margin: -30px -1.5rem 0;
             padding: 0.3rem 0.7rem;
-            @media screen and (min-width: 64.063em) {
+            @media screen and (min-width:64.063em) {
                 margin-right: -2.5rem;
             }
-            @media screen and (min-width: 100em) {
+            @media screen and (min-width:100em) {
                 margin-right: -3.5rem;
             }
             time {
@@ -509,10 +523,10 @@ a {
         }
         .post-content {
             padding-top: 1.5rem;
-            @media screen and (min-width: 64.063em) {
+            @media screen and (min-width:64.063em) {
                 padding-top: -2.5rem;
             }
-            @media screen and (min-width: 100em) {
+            @media screen and (min-width:100em) {
                 padding-top: -3.5rem;
             }
         }
@@ -580,7 +594,7 @@ a {
             }
             header {
                 span {
-                    color: darken($color,12%);
+                    color: darken($color, 12%);
                     font-size: 1.4rem;
                     font-weight: 900;
                     font-family: "source sans pro", arial, sans-serif;
@@ -672,7 +686,7 @@ a {
     }
     > div {
         padding: 1.5em;
-        @media screen and (min-width: 64.063em) {
+        @media screen and (min-width:64.063em) {
             padding: 2.5em;
         }
         @media screen and (min-width:100em) {
