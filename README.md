@@ -6,7 +6,7 @@ A simple &amp; responsive theme for Ghost
 Demo
 ====
 
-You can view a live demo at desintegrateur.fr.
+You can view a live demo at www.desintegrateur.fr.
 
 Features
 ====
