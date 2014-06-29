@@ -3,6 +3,9 @@ About
 
 A simple &amp; responsive theme for Ghost
 
+![alt tag](http://alexisdegryse.fr/img/mockup-desintegrateur-1.jpg)
+![alt tag](http://alexisdegryse.fr/img/mockup-desintegrateur-2.jpg)
+
 Demo
 ====
 
