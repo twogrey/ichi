@@ -1,3 +1,8 @@
+Demo
+====
+
+You can view a live demo at www.desintegrateur.fr.
+
 About
 ====
 
@@ -13,11 +18,6 @@ So I decided to create my own free template to understand the structure and logi
 If you have any issue to say about this theme, please contact me !
 
 Mail : alexis.degryse@gmail.com
-
-Demo
-====
-
-You can view a live demo at www.desintegrateur.fr.
 
 Features
 ====
