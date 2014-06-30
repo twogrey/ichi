@@ -3,6 +3,17 @@ About
 
 A simple &amp; responsive theme for Ghost
 
+![alt tag](http://alexisdegryse.fr/img/mockup-desintegrateur-1.jpg)
+![alt tag](http://alexisdegryse.fr/img/mockup-desintegrateur-2.jpg)
+
+My name is Alexis DEGRYSE. I'm the author of this theme. 
+I'm a french front-end developer and I really appreciate Ghost. 
+So I decided to create my own free template to understand the structure and logic of Ghost.
+
+If you have any issue to say about this theme, please contact me !
+
+Mail : alexis.degryse@gmail.com
+
 Demo
 ====
 
@@ -21,7 +32,7 @@ Features
 * Cool 'read more' button
 * Dynamic logo & background
 * Facebook/Twitter/G+ share
-* Contact support
+* Contact support (alexis.degryse@gmail.com)
 
 Installation
 ====
