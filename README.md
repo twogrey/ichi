@@ -22,7 +22,7 @@ Mail : alexis.degryse@gmail.com
 Features
 ====
 * Responsive webdesign (mobile, tablet, laptop, desktop)
-* Built with Zzurb Foundation
+* Built with Zurb Foundation
 * Smooth scroll
 * Menu (Home / About / Contact) - You need to create two statics pages (one with /about as URL, and the other one with /contact as URL)
 * Socials networks (edit default.hbs to manage the display of your socials accounts). By default, there are : facebook, twitter, youtube, goggle plus, rss (but there are many more, juste check default.hbs) - don't forget to add your URL ID in default.hbs
