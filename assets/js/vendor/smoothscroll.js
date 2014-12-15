@@ -93,7 +93,7 @@ function ssc_scrollArray(e, t, n, r) {
 
 function ssc_wheel(e) {
     if (!ssc_initdone) {
-        init()
+        ssc_init()
     }
     var t = e.target;
     var n = ssc_overflowingAncestor(t);
