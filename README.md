@@ -8,8 +8,8 @@ About
 
 A simple &amp; responsive theme for Ghost
 
-![alt tag](http://alexisdegryse.fr/img/mockup-desintegrateur-1.jpg)
-![alt tag](http://alexisdegryse.fr/img/mockup-desintegrateur-2.jpg)
+![alt tag](screenshots/ichi-1.jpg)
+![alt tag](screenshots/ichi-2.jpg)
 
 My name is Alexis DEGRYSE. I'm the author of this theme. 
 I'm a french front-end developer and I really appreciate Ghost. 
