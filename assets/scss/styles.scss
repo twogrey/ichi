@@ -670,8 +670,8 @@ a {
 }
 
 /* featuredRED */
-.post.featured {
-    .home-template &, .tag-template & {
+.post {
+    .home-template &, .tag-template &, .archive-template & {
         padding: 0;
     }
     > a {
@@ -681,17 +681,16 @@ a {
             width: 100% !important;
             @include box-shadow(0 2px 10px 0 rgba(0, 0, 0, 0.2));
         }
-        p {
-            font-size: 0;
-            margin-bottom: 0;
-            img {
-                width: 100%;
-                height: auto;
-                @include box-shadow(0 2px 10px 0 rgba(0, 0, 0, 0.2));
-                &:hover {
-                    @include box-shadow(0 2px 10px 0 rgba(0, 0, 0, 0.5));
-                }
+        img {
+            width: 100%;
+            height: auto;
+            @include box-shadow(0 2px 10px 0 rgba(0, 0, 0, 0.2));
+            &:hover {
+                @include box-shadow(0 2px 10px 0 rgba(0, 0, 0, 0.5));
             }
+        }
+        + div .post-title {
+            margin-top: 0;
         }
     }
     > div {
@@ -706,9 +705,6 @@ a {
             .post-meta {
                 background: $color;
             }
-            h2 {
-                margin-top: 0;
-            }
         }
     }
 }
@@ -720,7 +716,7 @@ a {
         margin-top: 1rem;
         text-align: center;
         @media screen and (min-width:64.063em) {
-            width: 33%;
+            width: 32%;
             float: left;
         }
         a {
