@@ -27,7 +27,7 @@ Features
 * Menu (Home / About / Contact) - You need to create two statics pages (one with about as label, and the other one with contact as label)
 * Socials networks (edit default.hbs to manage the display of your socials accounts). By default, there are : facebook, twitter, youtube, google plus, rss (but there are many more, juste check default.hbs) - don't forget to add your URL ID in default.hbs
 * Post comments using Disqus - don't forget to add your ID in post.hbs
-* Featured post (allow the display of image in the homepage). Just check the star icon at top left of the preview post, then place an image in top of your content when you create your post).
+* Featured post (allow the display of image in the homepage). Just check the option 'Feature this post' in the Post Settings, then place an image in top of your content when you create your post).
 * Sass powered
 * Cool 'read more' button
 * Dynamic logo & background

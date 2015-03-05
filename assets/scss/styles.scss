@@ -230,7 +230,11 @@ a {
                 background: $black;
                 color: white;
                 text-transform: uppercase;
-                font-size: 2rem;
+                font-size: 0;
+                &:before {
+                    font-size: 2rem;
+                    line-height: 51px;
+                }
                 &:hover {
                     color: white;
                     background: $color;
@@ -298,6 +302,9 @@ a {
     display: block;
     color: #fff;
     padding: 0 20px;
+    &:before {
+        display: none;
+    }
 }
 .overlay ul li a:hover, .overlay ul li a:focus {
     background: $color;

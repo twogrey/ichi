@@ -51,9 +51,7 @@
     <button type="button" class="overlay-close">Close</button>
     <nav>
         <ul>
-            <li><a href="{{@blog.url}}">Home</a></li>
-            <li><a href="{{@blog.url}}/about">About</a></li>
-            <li><a href="{{@blog.url}}/contact">Contact</a></li>
+            {{navigation}}
         </ul>
     </nav>
 </div>
@@ -67,7 +65,9 @@
 <header class="site-head">
     <div class="vertical">
         <div class="site-head-content inner">
-            {{navigation}}
+            <ul class="side-nav blog-menu show-for-large-up">
+                {{navigation}}
+            </ul>
             {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img alt="{{@blog.title}}" src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
             <h1 class="blog-title">{{@blog.title}}</h1>
             <hr>

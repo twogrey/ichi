@@ -1,8 +1,3 @@
-<ul class="side-nav blog-menu show-for-large-up">
-    {{#foreach navigation}}
-<!--         <li><a class="fi-home" href="{{@blog.url}}"></a></li>
-        <li><a class="fi-torso" href="{{@blog.url}}/about"></a></li>
-        <li><a class="fi-mail" href="{{@blog.url}}/contact"></a></li> -->
-        <li><a class="fi-{{slug}}" href="{{url absolute="true"}}"></a></li>
-    {{/foreach}}
-</ul>
+{{#foreach navigation}}
+    <li><a class="fi-{{slug}}" href="{{url absolute="true"}}">{{label}}</a></li>
+{{/foreach}}
