@@ -3,6 +3,11 @@ Demo
 
 You can view a live demo at www.desintegrateur.fr.
 
+Download
+===
+
+Download the theme here : https://github.com/twogrey/ichi/archive/master.zip
+
 About
 ====
 
@@ -37,4 +42,4 @@ Features
 Installation
 ====
 
-Load in Ghost Dashboard or copy to theme directory on server.
+Download it (https://github.com/twogrey/ichi/archive/master.zip), then load in Ghost Dashboard or copy to theme directory on server.
