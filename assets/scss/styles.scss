@@ -12,7 +12,7 @@ body {
 h1 {
     font-family: "source sans pro", "helvetica neue", helvetica, arial, sans-serif;
 }
-button, .button, a, span, li, .head-area:after, hr, img, .read-more:before, main, .post, .head-area {
+button, .button, a, span, li, .head-area:after, hr, img, .read-more:before, main, .post {
     @include transition(.3s all);
 }
 a {
@@ -211,29 +211,23 @@ a {
             float: right;
         }
         li {
-            font-size: 1rem;
-            width: 32%;
-            float: left;
+            margin: .5rem 0 0 0;
             @media screen and (min-width:100em) {
-                width: 18%;
-                &:nth-child(1) {
-                    margin-left: 42%;
-                }
-            }
-            &:nth-child(2) {
-                margin: 0 2%;
-            }
-            &:hover {
+                text-align: right;
             }
             a {
-                padding: 5px 0;
+                padding: 5px 10px;
                 background: $black;
                 color: white;
                 text-transform: uppercase;
-                font-size: 0;
-                &:before {
-                    font-size: 2rem;
-                    line-height: 51px;
+                font-size: 1rem;
+                text-align: center;
+                @media screen and (min-width:100em) {
+                    padding: 5px 30px;
+                    display: inline-block;
+                    &:hover {
+                        padding: 5px 50px;
+                    }
                 }
                 &:hover {
                     color: white;
