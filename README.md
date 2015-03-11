@@ -24,7 +24,7 @@ Features
 * Responsive webdesign (mobile, tablet, laptop, desktop)
 * Built with Zurb Foundation
 * Smooth scroll
-* Menu (Home / About / Contact) - You need to create two statics pages (one with 'about' as label, and the other one with 'contact' as label)
+* Menu
 * Socials networks (edit default.hbs to manage the display of your socials accounts). By default, there are : facebook, twitter, youtube, google plus, rss (but there are many more, juste check default.hbs) - don't forget to add your URL ID in default.hbs
 * Post comments using Disqus - don't forget to add your ID in post.hbs
 * Post Cover Image
