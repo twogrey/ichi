@@ -8,7 +8,7 @@ module.exports = function(grunt) {
                 separator: ';',
             },
             dist: {
-                src: ['assets/js/jquery.fitvids.js', 'assets/js/index.js', 'assets/js/foundation.min.js', 'assets/js/overlay/snap.svg-min.js', 'assets/js/overlay/classie.js', 'assets/js/overlay/demo1.js', 'assets/js/vendor/smoothscroll.js'],
+                src: ['assets/js/jquery.fitvids.js', 'assets/js/index.js', 'assets/js/foundation.min.js', 'assets/js/overlay/snap.svg-min.js', 'assets/js/overlay/classie.js', 'assets/js/overlay/demo1.js'],
                 dest: 'assets/js/built.js'
             }
         },
