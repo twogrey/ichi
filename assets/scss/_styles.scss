@@ -164,6 +164,10 @@ a {
         right: 0;
         top: 0;
         bottom: 0;
+        .header-left & {
+            left: 0 !important;
+            right: auto !important;
+        }
     }
 }
 .site-head {
@@ -349,8 +353,11 @@ a {
         }
     }
     @media screen and (min-width:64.063em) {
-        position: absolute;
+        float: left !important;
         height: 100%;
+        .header-left & {
+            float: right !important;
+        }
     }
     .pagination {
         position: relative;

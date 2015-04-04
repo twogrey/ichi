@@ -28,7 +28,7 @@ Features
 ====
 * Responsive webdesign (mobile, tablet, laptop, desktop)
 * Built with Zurb Foundation
-* Smooth scroll
+* By default, the sidebar is to the right. If you want it to the left, just add the class .header-left to the <body> tag
 * Menu
 * Socials networks (edit default.hbs to manage the display of your socials accounts). By default, there are : facebook, twitter, youtube, google plus, rss (but there are many more, juste check default.hbs) - don't forget to add your URL ID in default.hbs
 * Post comments using Disqus - don't forget to add your ID in post.hbs
